@@ -1,0 +1,710 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
+body {
+  background: url(img/bg.png) #acba98;
+  color: #fff;
+  font-family: Oswald, DIN, sans-serif;
+  margin: 0;
+  font-weight: 300; }
+
+a {
+  color: #aa0000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.header {
+  background: #444;
+  padding: 0.5em;
+  margin: 0 0 1em; }
+  .header .match-nav {
+    padding: 0.5em;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    width: 25%;
+    text-align: right;
+    color: #ddd; }
+  .header a {
+    color: #ddd; }
+
+.pageContainer {
+  padding: 1em;
+  clear: both; }
+
+.team-bangladesh {
+  color: #02554e; }
+  .team-bangladesh a {
+    color: #02554e; }
+
+.team-bangladesh-block {
+  background: #04a093 !important;
+  color: white; }
+  .team-bangladesh-block a {
+    color: white; }
+
+.ball-bangladesh .ball1, .ball-bangladesh .ball2, .ball-bangladesh .ball3, .ball-bangladesh .ball4, .ball-bangladesh .ball5, .ball-bangladesh .ball6 {
+  background-color: #04a093;
+  color: white;
+  border: 1px solid #02554e; }
+
+.chase-bangladesh .chaserate {
+  background-color: #04a093; }
+
+.team-pakistan {
+  color: black; }
+  .team-pakistan a {
+    color: black; }
+
+.team-pakistan-block {
+  background: #084b01 !important;
+  color: white; }
+  .team-pakistan-block a {
+    color: white; }
+
+.ball-pakistan .ball1, .ball-pakistan .ball2, .ball-pakistan .ball3, .ball-pakistan .ball4, .ball-pakistan .ball5, .ball-pakistan .ball6 {
+  background-color: #084b01;
+  color: white;
+  border: 1px solid black; }
+
+.chase-pakistan .chaserate {
+  background-color: #084b01; }
+
+.team-new-zealand {
+  color: black; }
+  .team-new-zealand a {
+    color: black; }
+
+.team-new-zealand-block {
+  background: #012247 !important;
+  color: white; }
+  .team-new-zealand-block a {
+    color: white; }
+
+.ball-new-zealand .ball1, .ball-new-zealand .ball2, .ball-new-zealand .ball3, .ball-new-zealand .ball4, .ball-new-zealand .ball5, .ball-new-zealand .ball6 {
+  background-color: #012247;
+  color: white;
+  border: 1px solid black; }
+
+.chase-new-zealand .chaserate {
+  background-color: #012247; }
+
+.team-england {
+  color: #d9d9d9; }
+  .team-england a {
+    color: #d9d9d9; }
+
+.team-england-block {
+  background: white !important;
+  color: #aa0000; }
+  .team-england-block a {
+    color: #aa0000; }
+
+.ball-england .ball1, .ball-england .ball2, .ball-england .ball3, .ball-england .ball4, .ball-england .ball5, .ball-england .ball6 {
+  background-color: white;
+  color: #aa0000;
+  border: 1px solid #d9d9d9; }
+
+.chase-england .chaserate {
+  background-color: white; }
+
+.team-india {
+  color: #00005d; }
+  .team-india a {
+    color: #00005d; }
+
+.team-india-block {
+  background: #0000aa !important;
+  color: #ff9900; }
+  .team-india-block a {
+    color: #ff9900; }
+
+.ball-india .ball1, .ball-india .ball2, .ball-india .ball3, .ball-india .ball4, .ball-india .ball5, .ball-india .ball6 {
+  background-color: #0000aa;
+  color: #ff9900;
+  border: 1px solid #00005d; }
+
+.chase-india .chaserate {
+  background-color: #0000aa; }
+
+.team-scotland {
+  color: #003c71; }
+  .team-scotland a {
+    color: #003c71; }
+
+.team-scotland-block {
+  background: #0065bd !important;
+  color: white; }
+  .team-scotland-block a {
+    color: white; }
+
+.ball-scotland .ball1, .ball-scotland .ball2, .ball-scotland .ball3, .ball-scotland .ball4, .ball-scotland .ball5, .ball-scotland .ball6 {
+  background-color: #0065bd;
+  color: white;
+  border: 1px solid #003c71; }
+
+.chase-scotland .chaserate {
+  background-color: #0065bd; }
+
+.team-united-arab-emirates {
+  color: #52525a; }
+  .team-united-arab-emirates a {
+    color: #52525a; }
+
+.team-united-arab-emirates-block {
+  background: #767682 !important;
+  color: white; }
+  .team-united-arab-emirates-block a {
+    color: white; }
+
+.ball-united-arab-emirates .ball1, .ball-united-arab-emirates .ball2, .ball-united-arab-emirates .ball3, .ball-united-arab-emirates .ball4, .ball-united-arab-emirates .ball5, .ball-united-arab-emirates .ball6 {
+  background-color: #767682;
+  color: white;
+  border: 1px solid #52525a; }
+
+.chase-united-arab-emirates .chaserate {
+  background-color: #767682; }
+
+.team-south-africa {
+  color: #b38f00; }
+  .team-south-africa a {
+    color: #b38f00; }
+
+.team-south-africa-block {
+  background: #ffcd00 !important;
+  color: #4d3d00; }
+  .team-south-africa-block a {
+    color: #4d3d00; }
+
+.ball-south-africa .ball1, .ball-south-africa .ball2, .ball-south-africa .ball3, .ball-south-africa .ball4, .ball-south-africa .ball5, .ball-south-africa .ball6 {
+  background-color: #ffcd00;
+  color: #4d3d00;
+  border: 1px solid #b38f00; }
+
+.chase-south-africa .chaserate {
+  background-color: #ffcd00; }
+
+.team-zimbabwe {
+  color: #c2242f; }
+  .team-zimbabwe a {
+    color: #c2242f; }
+
+.team-zimbabwe-block {
+  background: #df535d !important;
+  color: white; }
+  .team-zimbabwe-block a {
+    color: white; }
+
+.ball-zimbabwe .ball1, .ball-zimbabwe .ball2, .ball-zimbabwe .ball3, .ball-zimbabwe .ball4, .ball-zimbabwe .ball5, .ball-zimbabwe .ball6 {
+  background-color: #df535d;
+  color: white;
+  border: 1px solid #c2242f; }
+
+.chase-zimbabwe .chaserate {
+  background-color: #df535d; }
+
+.team-australia {
+  color: #e6ac00; }
+  .team-australia a {
+    color: #e6ac00; }
+
+.team-australia-block {
+  background: #ffcc33 !important;
+  color: #467101; }
+  .team-australia-block a {
+    color: #467101; }
+
+.ball-australia .ball1, .ball-australia .ball2, .ball-australia .ball3, .ball-australia .ball4, .ball-australia .ball5, .ball-australia .ball6 {
+  background-color: #ffcc33;
+  color: #467101;
+  border: 1px solid #e6ac00; }
+
+.chase-australia .chaserate {
+  background-color: #ffcc33; }
+
+.team-ireland {
+  color: #364126; }
+  .team-ireland a {
+    color: #364126; }
+
+.team-ireland-block {
+  background: #5f7142 !important;
+  color: white; }
+  .team-ireland-block a {
+    color: white; }
+
+.ball-ireland .ball1, .ball-ireland .ball2, .ball-ireland .ball3, .ball-ireland .ball4, .ball-ireland .ball5, .ball-ireland .ball6 {
+  background-color: #5f7142;
+  color: white;
+  border: 1px solid #364126; }
+
+.chase-ireland .chaserate {
+  background-color: #5f7142; }
+
+.team-west-indies {
+  color: #410126; }
+  .team-west-indies a {
+    color: #410126; }
+
+.team-west-indies-block {
+  background: #8c0253 !important;
+  color: white; }
+  .team-west-indies-block a {
+    color: white; }
+
+.ball-west-indies .ball1, .ball-west-indies .ball2, .ball-west-indies .ball3, .ball-west-indies .ball4, .ball-west-indies .ball5, .ball-west-indies .ball6 {
+  background-color: #8c0253;
+  color: white;
+  border: 1px solid #410126; }
+
+.chase-west-indies .chaserate {
+  background-color: #8c0253; }
+
+.team-sri-lanka {
+  color: #017090; }
+  .team-sri-lanka a {
+    color: #017090; }
+
+.team-sri-lanka-block {
+  background: #02abdc !important;
+  color: white; }
+  .team-sri-lanka-block a {
+    color: white; }
+
+.ball-sri-lanka .ball1, .ball-sri-lanka .ball2, .ball-sri-lanka .ball3, .ball-sri-lanka .ball4, .ball-sri-lanka .ball5, .ball-sri-lanka .ball6 {
+  background-color: #02abdc;
+  color: white;
+  border: 1px solid #017090; }
+
+.chase-sri-lanka .chaserate {
+  background-color: #02abdc; }
+
+.team-afghanistan {
+  color: #00004d; }
+  .team-afghanistan a {
+    color: #00004d; }
+
+.team-afghanistan-block {
+  background: #000099 !important;
+  color: white; }
+  .team-afghanistan-block a {
+    color: white; }
+
+.ball-afghanistan .ball1, .ball-afghanistan .ball2, .ball-afghanistan .ball3, .ball-afghanistan .ball4, .ball-afghanistan .ball5, .ball-afghanistan .ball6 {
+  background-color: #000099;
+  color: white;
+  border: 1px solid #00004d; }
+
+.chase-afghanistan .chaserate {
+  background-color: #000099; }
+
+h1 {
+  font-weight: 300;
+  color: #555;
+  margin: 0; }
+  h1 .teamOne, h1 .teamTwo {
+    font-weight: 400; }
+
+h2, h3, h4 {
+  font-weight: 300;
+  color: #fff;
+  margin: 0; }
+
+h2.hh {
+  padding: 0.3em;
+  text-align: center;
+  margin: 1em 0 0.5em;
+  background: #93a679;
+  border-radius: 10px; }
+
+h3.hh {
+  text-align: center;
+  margin: 0.5em 0; }
+
+.banner {
+  margin: 0 0 2em;
+  height: 7em;
+  background: url(img/banner.png) #eeeeee;
+  background-size: cover;
+  border-bottom: 3px solid #7a8d5f; }
+
+.home .right-col {
+  float: right;
+  width: 50%; }
+.home .left-col {
+  position: relative;
+  width: 45%; }
+.home h2 {
+  margin-bottom: 2em; }
+.home h3 {
+  margin-bottom: 1em; }
+.home table {
+  margin: 0 1em 1em 0; }
+.home .teams a {
+  position: relative;
+  display: block;
+  padding: 1em;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center; }
+  .home .teams a span {
+    font-weight: 300;
+    font-size: 0.8em;
+    text-align: left;
+    display: block;
+    position: absolute;
+    color: rgba(0, 0, 0, 0);
+    width: 1.5em;
+    height: 1.5em;
+    background: url(img/bg-v.png) 50% 50% no-repeat white;
+    background-size: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+    top: 0em;
+    left: 50%;
+    margin: -0.75em 0 0 -0.75em;
+    border-radius: 2em;
+    border: 1px solid #ccc; }
+.home .match-type {
+  color: #ff0;
+  text-transform: uppercase; }
+.home p {
+  font-family: Lusitana, DIN, sans-serif;
+  color: #333;
+  margin: 0;
+  background: #acba98;
+  padding: 0.5em;
+  line-height: 1.6; }
+  .home p.caption {
+    font-family: Oswald, DIN, sans-serif;
+    padding: 0 1.2em;
+    text-align: center;
+    margin: 0.5em 0 2em;
+    background: transparent;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400; }
+  .home p.warning {
+    background: #fc3;
+    border-radius: 1em;
+    border: 1px solid #cc9900;
+    padding: 1em; }
+    .home p.warning span {
+      font-family: Oswald, DIN, sans-serif;
+      text-transform: uppercase;
+      color: #a00; }
+.home li {
+  font-family: Lusitana, DIN, sans-serif;
+  color: #333; }
+.home img {
+  width: 100%;
+  display: block;
+  margin: 1em 0 0; }
+
+table.table td, table.table th {
+  padding: 0.5em 1em;
+  margin: 0; }
+table.table th {
+  background: #a0b089;
+  color: #444;
+  text-align: left;
+  font-weight: 400; }
+table.table td {
+  background-color: #b8c4a7;
+  color: #444; }
+
+.graph {
+  float: left;
+  width: 80%;
+  overflow-x: auto; }
+
+.current-batsman {
+  font-weight: 700; }
+
+.ball {
+  position: relative;
+  z-index: 20;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: #444;
+  margin: 2px 0 0 0;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 9.6px; }
+  .ball .commentary {
+    display: none; }
+
+.ball-dimmer {
+  opacity: 0.15; }
+
+.ball:hover {
+  background-color: #ff0 !important;
+  color: #000; }
+
+.ball-dot {
+  position: relative;
+  height: 6px;
+  width: 12px;
+  padding: 0;
+  background: url(img/dot.png) 50% 50% no-repeat transparent;
+  background-size: contain;
+  border-radius: 0; }
+
+.ball-bye {
+  padding-top: 0 !important;
+  color: #444 !important;
+  background: url(img/bye.png) 50% 50% no-repeat #eeeeee;
+  background-color: #eeeeee !important;
+  background-size: 12px 12px;
+  color: #6e6e6e; }
+
+.ball-legbye {
+  padding-top: 0 !important;
+  color: #444 !important;
+  background: url(img/legbye.png) 50% 50% no-repeat #eeeeee;
+  background-color: #eeeeee !important;
+  background-size: 12px 12px;
+  color: #6e6e6e; }
+
+.ball-noball {
+  padding-top: 0 !important;
+  color: #444 !important;
+  background: url(img/noball.png) 50% 50% no-repeat #eeeeee;
+  background-color: #eeeeee !important;
+  background-size: 12px 12px;
+  color: #6e6e6e; }
+
+.ball-wide {
+  padding-top: 0 !important;
+  color: #444 !important;
+  background: url(img/wide.png) 50% 50% no-repeat #eeeeee;
+  background-color: #eeeeee !important;
+  background-size: 12px 12px;
+  color: #6e6e6e; }
+
+.ball-wicket {
+  background: url(img/bg-wicket.png) 50% 50% no-repeat #aa0000;
+  background-size: contain;
+  background: #aa0000;
+  border: 1px solid #aa0000;
+  border-radius: 0;
+  height: 6px; }
+
+.ball2 {
+  height: 26px;
+  padding-top: 3.6px; }
+
+.ball3 {
+  padding-top: 9.6px;
+  height: 40px; }
+
+.ball4 {
+  height: 54px;
+  padding-top: 16.8px; }
+
+.ball5 {
+  height: 68px;
+  padding-top: 24px; }
+
+.ball6 {
+  height: 82px;
+  padding-top: 30px; }
+
+table.fixture {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border: 1px solid #a0b089;
+  border-bottom: 3px solid #93a679; }
+  table.fixture td, table.fixture th {
+    text-align: center;
+    width: 12px;
+    margin: 0;
+    border: 0px;
+    padding: 2px;
+    font-weight: 300;
+    color: #444;
+    background: #acba98; }
+  table.fixture td:hover {
+    background: #c5ceb7; }
+  table.fixture th {
+    color: #999;
+    border: 0px;
+    vertical-align: top;
+    width: 8em;
+    text-align: left;
+    padding: 1em; }
+  table.fixture tr {
+    margin: 0;
+    padding: 0; }
+  table.fixture tr.innings td {
+    position: relative;
+    padding-top: 12px;
+    vertical-align: bottom;
+    border-left: 1px dotted #93a679;
+    background-color: #acba98; }
+    table.fixture tr.innings td span.ratebar {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      z-index: 10; }
+    table.fixture tr.innings td span.rate-leading {
+      background: rgba(0, 204, 0, 0.2);
+      border-top: 1px solid #a00; }
+    table.fixture tr.innings td span.rate-chasing {
+      background: rgba(204, 0, 0, 0.2);
+      border-bottom: 1px solid #a00; }
+    table.fixture tr.innings td span.runrate {
+      background: #ff6; }
+    table.fixture tr.innings td:hover {
+      background-color: #bdc8ad; }
+  table.fixture tr.innings th {
+    min-width: 10em; }
+  table.fixture tr.overs td, table.fixture tr.overs th {
+    vertical-align: middle;
+    color: #444;
+    font-size: 12px;
+    background: #decfaf;
+    border: 1px dotted #c8af79; }
+  table.fixture tr.overs th {
+    text-align: right; }
+  table.fixture tr.overs td.current {
+    color: #aa0000; }
+  table.fixture tr.innings-chase td, table.fixture tr.innings-chase th {
+    position: relative;
+    vertical-align: bottom; }
+
+table.fixture-timeline {
+  width: 100% !important; }
+  table.fixture-timeline .commentary-col {
+    width: 45% !important; }
+  table.fixture-timeline .number-col {
+    width: 5% !important; }
+  table.fixture-timeline tr.innings td, table.fixture-timeline tr.innings th {
+    vertical-align: top !important;
+    text-align: left !important; }
+  table.fixture-timeline tr.innings .ball {
+    display: inline-block;
+    text-align: center !important;
+    overflow: hidden;
+    margin: 0 2px 2px 0 !important; }
+  table.fixture-timeline tr.innings .ball2 {
+    height: 12px;
+    width: 26px; }
+  table.fixture-timeline tr.innings .ball3 {
+    height: 12px;
+    width: 40px; }
+  table.fixture-timeline tr.innings .ball4 {
+    height: 12px;
+    width: 54px; }
+  table.fixture-timeline tr.innings .ball5 {
+    height: 12px;
+    width: 68px; }
+  table.fixture-timeline tr.innings .ball6 {
+    height: 12px;
+    width: 82px; }
+  table.fixture-timeline tr.innings .ball-dot {
+    display: inline-block;
+    width: 8px;
+    height: 12px; }
+
+.sidebar {
+  width: 18%;
+  float: right;
+  margin: 0; }
+  .sidebar .match-info {
+    padding: 0 0 1em;
+    color: #444; }
+    .sidebar .match-info h3 {
+      color: #444; }
+  .sidebar .sidebar-nav a {
+    display: inline-block;
+    padding: 0.3em 1em;
+    margin: 0;
+    border-radius: 1em 1em 0 0;
+    text-transform: uppercase;
+    background: #606f4a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.7em; }
+  .sidebar .sidebar-nav a.active {
+    color: #606f4a;
+    background: #f6f7f4; }
+  .sidebar .comment-section {
+    margin: 0 0 1em 0;
+    padding: 1em 1em 1.5em 1em;
+    color: #7a8d5f;
+    font-weight: 300;
+    border-radius: 0 1em 1em 0;
+    background: #f6f7f4; }
+    .sidebar .comment-section h3, .sidebar .comment-section h4 {
+      color: #222; }
+    .sidebar .comment-section h3 {
+      font-weight: 400; }
+    .sidebar .comment-section h4 {
+      margin: 0.6em 0; }
+    .sidebar .comment-section img {
+      max-width: 100%;
+      margin: 1em 0 0 0; }
+
+.bb table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 3em 0;
+  table-layout: fixed; }
+.bb table, .bb tr, .bb td, .bb th {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #93a679 !important; }
+.bb th, .bb td {
+  padding: 0.3em;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  background: #acba98; }
+.bb td {
+  border: 1px solid #acba98; }
+  .bb td.bowled {
+    background: #b8c4a7; }
+  .bb td.bb-wicket {
+    background: #b8c4a7 url(img/bg-bb-wicket.png) 100% 100% no-repeat !important;
+    border: 2px solid #a00 !important; }
+.bb .ball {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 2px 0;
+  border-radius: 7px;
+  font-size: 14px; }
+.bb .ball-dot {
+  height: 7px;
+  width: 7px; }
+.bb .ball1 {
+  height: 14px;
+  width: 14px; }
+.bb .ball2 {
+  height: 28px;
+  width: 14px;
+  padding-top: 3.5px; }
+.bb .ball3 {
+  height: 28px;
+  width: 21px;
+  padding-top: 3.5px; }
+.bb .ball4 {
+  height: 28px;
+  width: 28px;
+  padding-top: 3.5px; }
+.bb .ball5 {
+  height: 28px;
+  width: 35px;
+  padding-top: 3.5px; }
+.bb .ball6 {
+  height: 28px;
+  width: 42px;
+  padding-top: 3.5px; }
