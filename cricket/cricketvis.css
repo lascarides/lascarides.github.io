@@ -14,9 +14,14 @@ a {
     text-decoration: underline; }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #444;
   padding: 0.5em;
-  margin: 0 0 1em; }
+  margin: 0 0 1em;
+  z-index: 2000; }
   .header .match-nav {
     padding: 0.5em;
     position: absolute;
@@ -29,13 +34,14 @@ a {
     color: #ddd; }
 
 .pageContainer {
+  margin: 2.5em 0;
   padding: 1em;
   clear: both; }
 
 .team-bangladesh {
   color: #02554e; }
   .team-bangladesh a {
-    color: #02554e; }
+    color: #02554e !important; }
 
 .team-bangladesh-block {
   background: #04a093 !important;
@@ -54,7 +60,7 @@ a {
 .team-pakistan {
   color: black; }
   .team-pakistan a {
-    color: black; }
+    color: black !important; }
 
 .team-pakistan-block {
   background: #084b01 !important;
@@ -73,7 +79,7 @@ a {
 .team-new-zealand {
   color: black; }
   .team-new-zealand a {
-    color: black; }
+    color: black !important; }
 
 .team-new-zealand-block {
   background: #012247 !important;
@@ -92,7 +98,7 @@ a {
 .team-england {
   color: #d9d9d9; }
   .team-england a {
-    color: #d9d9d9; }
+    color: #d9d9d9 !important; }
 
 .team-england-block {
   background: white !important;
@@ -111,7 +117,7 @@ a {
 .team-india {
   color: #00005d; }
   .team-india a {
-    color: #00005d; }
+    color: #00005d !important; }
 
 .team-india-block {
   background: #0000aa !important;
@@ -130,7 +136,7 @@ a {
 .team-scotland {
   color: #003c71; }
   .team-scotland a {
-    color: #003c71; }
+    color: #003c71 !important; }
 
 .team-scotland-block {
   background: #0065bd !important;
@@ -149,7 +155,7 @@ a {
 .team-united-arab-emirates {
   color: #52525a; }
   .team-united-arab-emirates a {
-    color: #52525a; }
+    color: #52525a !important; }
 
 .team-united-arab-emirates-block {
   background: #767682 !important;
@@ -168,7 +174,7 @@ a {
 .team-south-africa {
   color: #b38f00; }
   .team-south-africa a {
-    color: #b38f00; }
+    color: #b38f00 !important; }
 
 .team-south-africa-block {
   background: #ffcd00 !important;
@@ -187,7 +193,7 @@ a {
 .team-zimbabwe {
   color: #c2242f; }
   .team-zimbabwe a {
-    color: #c2242f; }
+    color: #c2242f !important; }
 
 .team-zimbabwe-block {
   background: #df535d !important;
@@ -206,7 +212,7 @@ a {
 .team-australia {
   color: #e6ac00; }
   .team-australia a {
-    color: #e6ac00; }
+    color: #e6ac00 !important; }
 
 .team-australia-block {
   background: #ffcc33 !important;
@@ -225,7 +231,7 @@ a {
 .team-ireland {
   color: #364126; }
   .team-ireland a {
-    color: #364126; }
+    color: #364126 !important; }
 
 .team-ireland-block {
   background: #5f7142 !important;
@@ -244,7 +250,7 @@ a {
 .team-west-indies {
   color: #410126; }
   .team-west-indies a {
-    color: #410126; }
+    color: #410126 !important; }
 
 .team-west-indies-block {
   background: #8c0253 !important;
@@ -263,7 +269,7 @@ a {
 .team-sri-lanka {
   color: #017090; }
   .team-sri-lanka a {
-    color: #017090; }
+    color: #017090 !important; }
 
 .team-sri-lanka-block {
   background: #02abdc !important;
@@ -282,7 +288,7 @@ a {
 .team-afghanistan {
   color: #00004d; }
   .team-afghanistan a {
-    color: #00004d; }
+    color: #00004d !important; }
 
 .team-afghanistan-block {
   background: #000099 !important;
@@ -413,6 +419,13 @@ table.table th {
 table.table td {
   background-color: #b8c4a7;
   color: #444; }
+
+table.panel {
+  table-layout: fixed;
+  width: 100%; }
+  table.panel td {
+    vertical-align: top;
+    text-align: center; }
 
 .graph {
   float: left;

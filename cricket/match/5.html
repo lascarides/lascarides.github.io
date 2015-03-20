@@ -39,8 +39,6 @@
               </h1>
               <h2>
                 <span class='score'></span>
-                for
-                <span class='wickets'></span>
               </h2>
             </th>
             <td class='over' data-runrate='0.0' data-runtotal='0'>
@@ -2886,8 +2884,6 @@
               </h1>
               <h2>
                 <span class='score'></span>
-                for
-                <span class='wickets'></span>
               </h2>
             </th>
             <td class='over' data-runrate='8.0' data-runtotal='8'>
@@ -5778,119 +5774,78 @@
         Match #5
       </div>
       <div class='sidebar-nav'>
-        <a class='active' href='5.html#commentary'>Commentary</a>
-        <a href='5.html#batting'>Batting</a>
-        <a href='5.html#bowling'>Bowling</a>
+        <a class='active' data-panel='#commentary' href='5.html#'>Commentary</a>
+        <a data-panel='#batting' href='5.html#'>Batting</a>
+        <a data-panel='#bowling' href='5.html#'>Bowling</a>
       </div>
       <div class='comment-section active' id='commentary'></div>
       <div class='comment-section' id='batting'>
         <h3>Batting</h3>
-        <table>
+        <div class='batsman-all'>Show all batsmen</div>
+        <table class='panel'>
           <thead>
             <tr>
-              <th>Batsman</th>
-              <th>Runs</th>
-              <th>Extras</th>
-              <th>Out</th>
+              <th class='team-west-indies-block'>West Indies</th>
+              <th class='team-ireland-block'>Ireland</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class='batsman'>Smith</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Gayle</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Samuels</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Simmons</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Ramdin</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Sammy</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Russell</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class='team-west-indies'>
+                <div class='batsman'>Smith</div>
+                <div class='batsman'>Gayle</div>
+                <div class='batsman'>Samuels</div>
+                <div class='batsman'>Simmons</div>
+                <div class='batsman'>Ramdin</div>
+                <div class='batsman'>Sammy</div>
+                <div class='batsman'>Russell</div>
+              </td>
+              <td class='team-ireland'>
+                <div class='batsman'>Porterfield</div>
+                <div class='batsman'>Stirling</div>
+                <div class='batsman'>Joyce</div>
+                <div class='batsman'>NJ O'Brien</div>
+                <div class='batsman'>Balbirnie</div>
+                <div class='batsman'>Wilson</div>
+                <div class='batsman'>KJ O'Brien</div>
+                <div class='batsman'>Mooney</div>
+              </td>
             </tr>
           </tbody>
-          <div class='batsman-all'>All bowlers</div>
         </table>
       </div>
       <div class='comment-section' id='bowling'>
         <h3>Bowling</h3>
-        <table>
+        <div class='batsman-all'>Show all bowlers</div>
+        <table class='panel'>
           <thead>
             <tr>
-              <th>Bowler</th>
-              <th>Runs</th>
-              <th>Extras</th>
-              <th>Out</th>
+              <th class='team-ireland-block'>Ireland</th>
+              <th class='team-west-indies-block'>West Indies</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class='bowler'>Mooney</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Sorensen</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>McBrine</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>KJ O'Brien</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Dockrell</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Stirling</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class='team-west-indies'>
+                <div class='bowler'>Mooney</div>
+                <div class='bowler'>Sorensen</div>
+                <div class='bowler'>McBrine</div>
+                <div class='bowler'>KJ O'Brien</div>
+                <div class='bowler'>Dockrell</div>
+                <div class='bowler'>Stirling</div>
+              </td>
+              <td class='team-ireland'>
+                <div class='bowler'>Holder</div>
+                <div class='bowler'>Roach</div>
+                <div class='bowler'>Taylor</div>
+                <div class='bowler'>Russell</div>
+                <div class='bowler'>Gayle</div>
+                <div class='bowler'>Sammy</div>
+                <div class='bowler'>Samuels</div>
+                <div class='bowler'>Simmons</div>
+              </td>
             </tr>
           </tbody>
-          <div class='bowler-all'>All bowlers</div>
         </table>
       </div>
     </div>
@@ -7334,5 +7289,10 @@
         </tbody>
       </table>
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-3661229-7', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>

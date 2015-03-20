@@ -59,7 +59,7 @@ function setupCommentaryBox() {
 		$('.comment-section').hide();
 		$('.sidebar-nav a').removeClass('active');
 		$(this).addClass('active');
-		$( $(this).attr('href') ).show();
+		$( $(this).attr('data-panel') ).show();
 		return false;
 	});
 }
@@ -118,8 +118,19 @@ function calcTotals() {
 	var score = 0;
 
 	$('tr.innings').each(function(){
-		$(this).find('h2 .score').html ($(this).find('td.over:last').attr('data-runtotal') );
-		$(this).find('h2 .wickets').html( $(this).find('.ball-wicket').length );
+		// Display side score
+		var score = $(this).find('td.over:last').attr('data-runtotal');
+		var wickets = $(this).find('.ball-wicket').length;
+		if (!score) {
+			score = '';
+		} else if (wickets == 10) {
+			score = score + ' all out';
+		} else {
+			score = score + ' for ' + wickets;
+		}
+		$(this).find('h2 .score').html ( score );
+
+		// Find last batsman & bowler
 		$('.ball').each(function(){
 			score += parseInt($(this).attr('data-runs'));
 			if (batsman != $(this).attr('data-batsman')) {

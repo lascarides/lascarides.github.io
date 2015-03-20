@@ -39,8 +39,6 @@
               </h1>
               <h2>
                 <span class='score'></span>
-                for
-                <span class='wickets'></span>
               </h2>
             </th>
             <td class='over' data-runrate='2.0' data-runtotal='2'>
@@ -2800,8 +2798,6 @@
               </h1>
               <h2>
                 <span class='score'></span>
-                for
-                <span class='wickets'></span>
               </h2>
             </th>
             <td class='over' data-runrate='2.0' data-runtotal='2'>
@@ -5848,131 +5844,81 @@
         Match #4
       </div>
       <div class='sidebar-nav'>
-        <a class='active' href='4.html#commentary'>Commentary</a>
-        <a href='4.html#batting'>Batting</a>
-        <a href='4.html#bowling'>Bowling</a>
+        <a class='active' data-panel='#commentary' href='4.html#'>Commentary</a>
+        <a data-panel='#batting' href='4.html#'>Batting</a>
+        <a data-panel='#bowling' href='4.html#'>Bowling</a>
       </div>
       <div class='comment-section active' id='commentary'></div>
       <div class='comment-section' id='batting'>
         <h3>Batting</h3>
-        <table>
+        <div class='batsman-all'>Show all batsmen</div>
+        <table class='panel'>
           <thead>
             <tr>
-              <th>Batsman</th>
-              <th>Runs</th>
-              <th>Extras</th>
-              <th>Out</th>
+              <th class='team-india-block'>India</th>
+              <th class='team-pakistan-block'>Pakistan</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class='batsman'>RG Sharma</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Dhawan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Kohli</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Raina</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Dhoni</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Jadeja</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Rahane</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Mohammed Shami</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='batsman'>Ashwin</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class='team-india'>
+                <div class='batsman'>RG Sharma</div>
+                <div class='batsman'>Dhawan</div>
+                <div class='batsman'>Kohli</div>
+                <div class='batsman'>Raina</div>
+                <div class='batsman'>Dhoni</div>
+                <div class='batsman'>Jadeja</div>
+                <div class='batsman'>Rahane</div>
+                <div class='batsman'>Mohammed Shami</div>
+                <div class='batsman'>Ashwin</div>
+              </td>
+              <td class='team-pakistan'>
+                <div class='batsman'>Ahmed Shehzad</div>
+                <div class='batsman'>Younis Khan</div>
+                <div class='batsman'>Haris Sohail</div>
+                <div class='batsman'>Misbah-ul-Haq</div>
+                <div class='batsman'>Sohaib Maqsood</div>
+                <div class='batsman'>Umar Akmal</div>
+                <div class='batsman'>Shahid Afridi</div>
+                <div class='batsman'>Wahab Riaz</div>
+                <div class='batsman'>Yasir Shah</div>
+                <div class='batsman'>Sohail Khan</div>
+                <div class='batsman'>Mohammad Irfan</div>
+              </td>
             </tr>
           </tbody>
-          <div class='batsman-all'>All bowlers</div>
         </table>
       </div>
       <div class='comment-section' id='bowling'>
         <h3>Bowling</h3>
-        <table>
+        <div class='batsman-all'>Show all bowlers</div>
+        <table class='panel'>
           <thead>
             <tr>
-              <th>Bowler</th>
-              <th>Runs</th>
-              <th>Extras</th>
-              <th>Out</th>
+              <th class='team-pakistan-block'>Pakistan</th>
+              <th class='team-india-block'>India</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class='bowler'>Mohammad Irfan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Sohail Khan</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Shahid Afridi</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Wahab Riaz</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Yasir Shah</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class='bowler'>Haris Sohail</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class='team-india'>
+                <div class='bowler'>Mohammad Irfan</div>
+                <div class='bowler'>Sohail Khan</div>
+                <div class='bowler'>Shahid Afridi</div>
+                <div class='bowler'>Wahab Riaz</div>
+                <div class='bowler'>Yasir Shah</div>
+                <div class='bowler'>Haris Sohail</div>
+              </td>
+              <td class='team-pakistan'>
+                <div class='bowler'>Yadav</div>
+                <div class='bowler'>Mohammed Shami</div>
+                <div class='bowler'>MM Sharma</div>
+                <div class='bowler'>Raina</div>
+                <div class='bowler'>Ashwin</div>
+                <div class='bowler'>Jadeja</div>
+              </td>
             </tr>
           </tbody>
-          <div class='bowler-all'>All bowlers</div>
         </table>
       </div>
     </div>
@@ -7471,5 +7417,10 @@
         </tbody>
       </table>
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-3661229-7', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
