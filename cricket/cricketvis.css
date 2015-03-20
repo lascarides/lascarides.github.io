@@ -39,23 +39,23 @@ a {
   clear: both; }
 
 .team-bangladesh {
-  color: #02554e; }
+  color: #001e16; }
   .team-bangladesh a {
-    color: #02554e !important; }
+    color: #001e16 !important; }
 
 .team-bangladesh-block {
-  background: #04a093 !important;
-  color: white; }
+  background: #006a4e !important;
+  color: #e97818; }
   .team-bangladesh-block a {
-    color: white; }
+    color: #e97818; }
 
 .ball-bangladesh .ball1, .ball-bangladesh .ball2, .ball-bangladesh .ball3, .ball-bangladesh .ball4, .ball-bangladesh .ball5, .ball-bangladesh .ball6 {
-  background-color: #04a093;
-  color: white;
-  border: 1px solid #02554e; }
+  background-color: #006a4e;
+  color: #e97818;
+  border: 1px solid #001e16; }
 
 .chase-bangladesh .chaserate {
-  background-color: #04a093; }
+  background-color: #006a4e; }
 
 .team-pakistan {
   color: black; }
@@ -172,118 +172,118 @@ a {
   background-color: #767682; }
 
 .team-south-africa {
-  color: #b38f00; }
+  color: #003b23; }
   .team-south-africa a {
-    color: #b38f00 !important; }
+    color: #003b23 !important; }
 
 .team-south-africa-block {
-  background: #ffcd00 !important;
-  color: #4d3d00; }
+  background: #008751 !important;
+  color: #fcd116; }
   .team-south-africa-block a {
-    color: #4d3d00; }
+    color: #fcd116; }
 
 .ball-south-africa .ball1, .ball-south-africa .ball2, .ball-south-africa .ball3, .ball-south-africa .ball4, .ball-south-africa .ball5, .ball-south-africa .ball6 {
-  background-color: #ffcd00;
-  color: #4d3d00;
-  border: 1px solid #b38f00; }
+  background-color: #008751;
+  color: #fcd116;
+  border: 1px solid #003b23; }
 
 .chase-south-africa .chaserate {
-  background-color: #ffcd00; }
+  background-color: #008751; }
 
 .team-zimbabwe {
-  color: #c2242f; }
+  color: #c90826; }
   .team-zimbabwe a {
-    color: #c2242f !important; }
+    color: #c90826 !important; }
 
 .team-zimbabwe-block {
-  background: #df535d !important;
+  background: #f62848 !important;
   color: white; }
   .team-zimbabwe-block a {
     color: white; }
 
 .ball-zimbabwe .ball1, .ball-zimbabwe .ball2, .ball-zimbabwe .ball3, .ball-zimbabwe .ball4, .ball-zimbabwe .ball5, .ball-zimbabwe .ball6 {
-  background-color: #df535d;
+  background-color: #f62848;
   color: white;
-  border: 1px solid #c2242f; }
+  border: 1px solid #c90826; }
 
 .chase-zimbabwe .chaserate {
-  background-color: #df535d; }
+  background-color: #f62848; }
 
 .team-australia {
-  color: #e6ac00; }
+  color: #c39f03; }
   .team-australia a {
-    color: #e6ac00 !important; }
+    color: #c39f03 !important; }
 
 .team-australia-block {
-  background: #ffcc33 !important;
-  color: #467101; }
+  background: #fcd116 !important;
+  color: #008751; }
   .team-australia-block a {
-    color: #467101; }
+    color: #008751; }
 
 .ball-australia .ball1, .ball-australia .ball2, .ball-australia .ball3, .ball-australia .ball4, .ball-australia .ball5, .ball-australia .ball6 {
-  background-color: #ffcc33;
-  color: #467101;
-  border: 1px solid #e6ac00; }
+  background-color: #fcd116;
+  color: #008751;
+  border: 1px solid #c39f03; }
 
 .chase-australia .chaserate {
-  background-color: #ffcc33; }
+  background-color: #fcd116; }
 
 .team-ireland {
-  color: #364126; }
+  color: #2f4728; }
   .team-ireland a {
-    color: #364126 !important; }
+    color: #2f4728 !important; }
 
 .team-ireland-block {
-  background: #5f7142 !important;
+  background: #4f7843 !important;
   color: white; }
   .team-ireland-block a {
     color: white; }
 
 .ball-ireland .ball1, .ball-ireland .ball2, .ball-ireland .ball3, .ball-ireland .ball4, .ball-ireland .ball5, .ball-ireland .ball6 {
-  background-color: #5f7142;
+  background-color: #4f7843;
   color: white;
-  border: 1px solid #364126; }
+  border: 1px solid #2f4728; }
 
 .chase-ireland .chaserate {
-  background-color: #5f7142; }
+  background-color: #4f7843; }
 
 .team-west-indies {
-  color: #410126; }
+  color: #34060b; }
   .team-west-indies a {
-    color: #410126 !important; }
+    color: #34060b !important; }
 
 .team-west-indies-block {
-  background: #8c0253 !important;
-  color: white; }
+  background: #790d1a !important;
+  color: #78e3ff; }
   .team-west-indies-block a {
-    color: white; }
+    color: #78e3ff; }
 
 .ball-west-indies .ball1, .ball-west-indies .ball2, .ball-west-indies .ball3, .ball-west-indies .ball4, .ball-west-indies .ball5, .ball-west-indies .ball6 {
-  background-color: #8c0253;
-  color: white;
-  border: 1px solid #410126; }
+  background-color: #790d1a;
+  color: #78e3ff;
+  border: 1px solid #34060b; }
 
 .chase-west-indies .chaserate {
-  background-color: #8c0253; }
+  background-color: #790d1a; }
 
 .team-sri-lanka {
-  color: #017090; }
+  color: #022957; }
   .team-sri-lanka a {
-    color: #017090 !important; }
+    color: #022957 !important; }
 
 .team-sri-lanka-block {
-  background: #02abdc !important;
-  color: white; }
+  background: #034da2 !important;
+  color: #feeb4b; }
   .team-sri-lanka-block a {
-    color: white; }
+    color: #feeb4b; }
 
 .ball-sri-lanka .ball1, .ball-sri-lanka .ball2, .ball-sri-lanka .ball3, .ball-sri-lanka .ball4, .ball-sri-lanka .ball5, .ball-sri-lanka .ball6 {
-  background-color: #02abdc;
-  color: white;
-  border: 1px solid #017090; }
+  background-color: #034da2;
+  color: #feeb4b;
+  border: 1px solid #022957; }
 
 .chase-sri-lanka .chaserate {
-  background-color: #02abdc; }
+  background-color: #034da2; }
 
 .team-afghanistan {
   color: #00004d; }
@@ -539,7 +539,7 @@ table.fixture {
     padding: 2px;
     font-weight: 300;
     color: #444;
-    background: #acba98; }
+    background: #b8c4a7; }
   table.fixture td:hover {
     background: #c5ceb7; }
   table.fixture th {
@@ -557,7 +557,7 @@ table.fixture {
     padding-top: 12px;
     vertical-align: bottom;
     border-left: 1px dotted #93a679;
-    background-color: #acba98; }
+    background-color: #b8c4a7; }
     table.fixture tr.innings td span.ratebar {
       display: block;
       position: absolute;
@@ -680,7 +680,7 @@ table.fixture-timeline {
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  background: #acba98; }
+  background: #b8c4a7; }
 .bb td {
   border: 1px solid #acba98; }
   .bb td.bowled {
