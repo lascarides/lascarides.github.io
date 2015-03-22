@@ -39,13 +39,13 @@ function setupRunRates() {
 	$('.innings td').each(function(){
 		// Place run rate marker at height of td, minus height of runs, 
 		// minus the baseline of maiden dots
-		var runrate_pos = $(this).innerHeight() - ($(this).attr('data-runrate') * bbSize) - (2.5 * bbSize);
+		var runrate_pos = $(this).innerHeight() - ($(this).attr('data-runrate') * bbSize);
 		$(this).find('.runrate').css('top', runrate_pos + 'px');
 	});
 	$('.innings-chase td').each(function(){
 
-		var chaserate_pos = parseInt($(this).innerHeight() - (chaserate * bbSize) - (2.5 * bbSize));
-		var reqrate_pos = parseInt($(this).innerHeight() - ($(this).find('.reqrate').attr('data-reqrate') * bbSize) - (2.5 * bbSize));
+		var chaserate_pos = parseInt($(this).innerHeight() - (chaserate * bbSize));
+		var reqrate_pos = parseInt($(this).innerHeight() - ($(this).find('.reqrate').attr('data-reqrate') * bbSize));
 		var cr_top = Math.min();
 		$(this).find('.chaserate').css('top', chaserate_pos + 'px');
 	});

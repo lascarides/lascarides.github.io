@@ -55,7 +55,8 @@ a {
   border: 1px solid #001e16; }
 
 .chase-bangladesh .chaserate {
-  background-color: #006a4e; }
+  background-color: #006a4e;
+  height: 1px !important; }
 
 .team-pakistan {
   color: black; }
@@ -74,7 +75,8 @@ a {
   border: 1px solid black; }
 
 .chase-pakistan .chaserate {
-  background-color: #084b01; }
+  background-color: #084b01;
+  height: 1px !important; }
 
 .team-new-zealand {
   color: black; }
@@ -93,7 +95,8 @@ a {
   border: 1px solid black; }
 
 .chase-new-zealand .chaserate {
-  background-color: #012247; }
+  background-color: #012247;
+  height: 1px !important; }
 
 .team-england {
   color: #d9d9d9; }
@@ -112,7 +115,8 @@ a {
   border: 1px solid #d9d9d9; }
 
 .chase-england .chaserate {
-  background-color: white; }
+  background-color: white;
+  height: 1px !important; }
 
 .team-india {
   color: #00005d; }
@@ -131,7 +135,8 @@ a {
   border: 1px solid #00005d; }
 
 .chase-india .chaserate {
-  background-color: #0000aa; }
+  background-color: #0000aa;
+  height: 1px !important; }
 
 .team-scotland {
   color: #003c71; }
@@ -150,7 +155,8 @@ a {
   border: 1px solid #003c71; }
 
 .chase-scotland .chaserate {
-  background-color: #0065bd; }
+  background-color: #0065bd;
+  height: 1px !important; }
 
 .team-united-arab-emirates {
   color: #52525a; }
@@ -169,7 +175,8 @@ a {
   border: 1px solid #52525a; }
 
 .chase-united-arab-emirates .chaserate {
-  background-color: #767682; }
+  background-color: #767682;
+  height: 1px !important; }
 
 .team-south-africa {
   color: #003b23; }
@@ -188,7 +195,8 @@ a {
   border: 1px solid #003b23; }
 
 .chase-south-africa .chaserate {
-  background-color: #008751; }
+  background-color: #008751;
+  height: 1px !important; }
 
 .team-zimbabwe {
   color: #c90826; }
@@ -207,7 +215,8 @@ a {
   border: 1px solid #c90826; }
 
 .chase-zimbabwe .chaserate {
-  background-color: #f62848; }
+  background-color: #f62848;
+  height: 1px !important; }
 
 .team-australia {
   color: #c39f03; }
@@ -226,7 +235,8 @@ a {
   border: 1px solid #c39f03; }
 
 .chase-australia .chaserate {
-  background-color: #fcd116; }
+  background-color: #fcd116;
+  height: 1px !important; }
 
 .team-ireland {
   color: #2f4728; }
@@ -245,7 +255,8 @@ a {
   border: 1px solid #2f4728; }
 
 .chase-ireland .chaserate {
-  background-color: #4f7843; }
+  background-color: #4f7843;
+  height: 1px !important; }
 
 .team-west-indies {
   color: #34060b; }
@@ -264,7 +275,8 @@ a {
   border: 1px solid #34060b; }
 
 .chase-west-indies .chaserate {
-  background-color: #790d1a; }
+  background-color: #790d1a;
+  height: 1px !important; }
 
 .team-sri-lanka {
   color: #022957; }
@@ -283,7 +295,8 @@ a {
   border: 1px solid #022957; }
 
 .chase-sri-lanka .chaserate {
-  background-color: #034da2; }
+  background-color: #034da2;
+  height: 1px !important; }
 
 .team-afghanistan {
   color: #00004d; }
@@ -302,7 +315,8 @@ a {
   border: 1px solid #00004d; }
 
 .chase-afghanistan .chaserate {
-  background-color: #000099; }
+  background-color: #000099;
+  height: 1px !important; }
 
 h1 {
   font-weight: 300;
@@ -458,11 +472,13 @@ table.panel {
 
 .ball-dot {
   position: relative;
-  height: 6px;
+  /*
+  height: $inningsGap * 3;
+  */
   width: 12px;
   padding: 0;
   background: url(img/dot.png) 50% 50% no-repeat transparent;
-  background-size: contain;
+  background-size: 50% 50%;
   border-radius: 0; }
 
 .ball-bye {
@@ -498,12 +514,10 @@ table.panel {
   color: #6e6e6e; }
 
 .ball-wicket {
-  background: url(img/bg-wicket.png) 50% 50% no-repeat #aa0000;
+  background: url(img/wicket.png) 50% 50% no-repeat #aa0000;
   background-size: contain;
-  background: #aa0000;
-  border: 1px solid #aa0000;
-  border-radius: 0;
-  height: 6px; }
+  border: 2px solid #aa0000;
+  border-radius: 12px; }
 
 .ball2 {
   height: 26px;
@@ -540,6 +554,14 @@ table.fixture {
     font-weight: 300;
     color: #444;
     background: #b8c4a7; }
+    table.fixture td.wicket-over, table.fixture th.wicket-over {
+      background-color: #b8c4a7;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bb9d88), color-stop(1, #b8c4a7));
+      background-image: -webkit-linear-gradient(top, #bb9d88, #b8c4a7);
+      background-image: -moz-linear-gradient(top, #bb9d88, #b8c4a7);
+      background-image: -ms-linear-gradient(top, #bb9d88, #b8c4a7);
+      background-image: -o-linear-gradient(top, #bb9d88, #b8c4a7);
+      background-image: linear-gradient(top, bottom, #bb9d88, #b8c4a7); }
   table.fixture td:hover {
     background: #c5ceb7; }
   table.fixture th {
@@ -573,7 +595,7 @@ table.fixture {
       background: rgba(204, 0, 0, 0.2);
       border-bottom: 1px solid #a00; }
     table.fixture tr.innings td span.runrate {
-      background: #ff6; }
+      background: #ff0; }
     table.fixture tr.innings td:hover {
       background-color: #bdc8ad; }
   table.fixture tr.innings th {
