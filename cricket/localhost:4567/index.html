@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+    <meta content='' name='description'>
+    <meta content='cricketVis' name='author'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <!--[if lt IE 9]>
+      <script src='//html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+    <![endif]-->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' type='text/javascript'></script>
+    <title>Visualizing Cricket | Michael Lascarides</title>
+    <link href='cricketvis.css' rel='stylesheet'>
+    <script src='js/cricketvis.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div class='banner'></div>
+    <div class='pageContainer home'>
+      <h1>Visualizing Cricket</h1>
+      <h2>
+        A graphical look at the sport of cricket, using data from the 2015 ICC World Cup. By
+        <a href='http://lascarid.es'>Michael Lascarides</a>
+      </h2>
+      <div class='right-col'>
+        <h3>Click on a match below to see the graphics</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Date</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='teams'>
+                <a class='team-new-zealand-block' href='match/1.html'>New Zealand</a>
+                <a class='team-sri-lanka-block' href='match/1.html'>
+                  <span>v</span>
+                  Sri Lanka
+                </a>
+              </td>
+              <td>14 February</td>
+              <td>
+                <div class='match-type'></div>
+                Hagley Oval, Christchurch
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-australia-block' href='match/2.html'>Australia</a>
+                <a class='team-england-block' href='match/2.html'>
+                  <span>v</span>
+                  England
+                </a>
+              </td>
+              <td>14 February</td>
+              <td>
+                <div class='match-type'></div>
+                Melbourne Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-south-africa-block' href='match/3.html'>South Africa</a>
+                <a class='team-zimbabwe-block' href='match/3.html'>
+                  <span>v</span>
+                  Zimbabwe
+                </a>
+              </td>
+              <td>15 February</td>
+              <td>
+                <div class='match-type'></div>
+                Seddon Park, Hamilton
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-india-block' href='match/4.html'>India</a>
+                <a class='team-pakistan-block' href='match/4.html'>
+                  <span>v</span>
+                  Pakistan
+                </a>
+              </td>
+              <td>15 February</td>
+              <td>
+                <div class='match-type'></div>
+                Adelaide Oval
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-west-indies-block' href='match/5.html'>West Indies</a>
+                <a class='team-ireland-block' href='match/5.html'>
+                  <span>v</span>
+                  Ireland
+                </a>
+              </td>
+              <td>16 February</td>
+              <td>
+                <div class='match-type'></div>
+                Saxton Oval, Nelson
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-scotland-block' href='match/6.html'>Scotland</a>
+                <a class='team-new-zealand-block' href='match/6.html'>
+                  <span>v</span>
+                  New Zealand
+                </a>
+              </td>
+              <td>17 February</td>
+              <td>
+                <div class='match-type'></div>
+                University Oval, Dunedin
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-bangladesh-block' href='match/7.html'>Bangladesh</a>
+                <a class='team-afghanistan-block' href='match/7.html'>
+                  <span>v</span>
+                  Afghanistan
+                </a>
+              </td>
+              <td>18 February</td>
+              <td>
+                <div class='match-type'></div>
+                Manuka Oval, Canberra
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-united-arab-emirates-block' href='match/8.html'>United Arab Emirates</a>
+                <a class='team-zimbabwe-block' href='match/8.html'>
+                  <span>v</span>
+                  Zimbabwe
+                </a>
+              </td>
+              <td>19 February</td>
+              <td>
+                <div class='match-type'></div>
+                Saxton Oval, Nelson
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-england-block' href='match/9.html'>England</a>
+                <a class='team-new-zealand-block' href='match/9.html'>
+                  <span>v</span>
+                  New Zealand
+                </a>
+              </td>
+              <td>20 February</td>
+              <td>
+                <div class='match-type'></div>
+                Westpac Stadium, Wellington
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-west-indies-block' href='match/10.html'>West Indies</a>
+                <a class='team-pakistan-block' href='match/10.html'>
+                  <span>v</span>
+                  Pakistan
+                </a>
+              </td>
+              <td>21 February</td>
+              <td>
+                <div class='match-type'></div>
+                Hagley Oval, Christchurch
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-australia-block' href='match/11.html'>Australia</a>
+                <a class='team-bangladesh-block' href='match/11.html'>
+                  <span>v</span>
+                  Bangladesh
+                </a>
+              </td>
+              <td>21 February</td>
+              <td>
+                <div class='match-type'></div>
+                Brisbane Cricket Ground, Woolloongabba, Brisbane
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-afghanistan-block' href='match/12.html'>Afghanistan</a>
+                <a class='team-sri-lanka-block' href='match/12.html'>
+                  <span>v</span>
+                  Sri Lanka
+                </a>
+              </td>
+              <td>22 February</td>
+              <td>
+                <div class='match-type'></div>
+                University Oval, Dunedin
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-india-block' href='match/13.html'>India</a>
+                <a class='team-south-africa-block' href='match/13.html'>
+                  <span>v</span>
+                  South Africa
+                </a>
+              </td>
+              <td>22 February</td>
+              <td>
+                <div class='match-type'></div>
+                Melbourne Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-england-block' href='match/14.html'>England</a>
+                <a class='team-scotland-block' href='match/14.html'>
+                  <span>v</span>
+                  Scotland
+                </a>
+              </td>
+              <td>23 February</td>
+              <td>
+                <div class='match-type'></div>
+                Hagley Oval, Christchurch
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-west-indies-block' href='match/15.html'>West Indies</a>
+                <a class='team-zimbabwe-block' href='match/15.html'>
+                  <span>v</span>
+                  Zimbabwe
+                </a>
+              </td>
+              <td>24 February</td>
+              <td>
+                <div class='match-type'></div>
+                Manuka Oval, Canberra
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-united-arab-emirates-block' href='match/16.html'>United Arab Emirates</a>
+                <a class='team-ireland-block' href='match/16.html'>
+                  <span>v</span>
+                  Ireland
+                </a>
+              </td>
+              <td>25 February</td>
+              <td>
+                <div class='match-type'></div>
+                Brisbane Cricket Ground, Woolloongabba, Brisbane
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-scotland-block' href='match/17.html'>Scotland</a>
+                <a class='team-afghanistan-block' href='match/17.html'>
+                  <span>v</span>
+                  Afghanistan
+                </a>
+              </td>
+              <td>26 February</td>
+              <td>
+                <div class='match-type'></div>
+                University Oval, Dunedin
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-sri-lanka-block' href='match/18.html'>Sri Lanka</a>
+                <a class='team-bangladesh-block' href='match/18.html'>
+                  <span>v</span>
+                  Bangladesh
+                </a>
+              </td>
+              <td>26 February</td>
+              <td>
+                <div class='match-type'></div>
+                Melbourne Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-south-africa-block' href='match/19.html'>South Africa</a>
+                <a class='team-west-indies-block' href='match/19.html'>
+                  <span>v</span>
+                  West Indies
+                </a>
+              </td>
+              <td>27 February</td>
+              <td>
+                <div class='match-type'></div>
+                Sydney Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-australia-block' href='match/20.html'>Australia</a>
+                <a class='team-new-zealand-block' href='match/20.html'>
+                  <span>v</span>
+                  New Zealand
+                </a>
+              </td>
+              <td>28 February</td>
+              <td>
+                <div class='match-type'></div>
+                Eden Park, Auckland
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-united-arab-emirates-block' href='match/21.html'>United Arab Emirates</a>
+                <a class='team-india-block' href='match/21.html'>
+                  <span>v</span>
+                  India
+                </a>
+              </td>
+              <td>28 February</td>
+              <td>
+                <div class='match-type'></div>
+                Western Australia Cricket Association Ground, Perth
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-england-block' href='match/22.html'>England</a>
+                <a class='team-sri-lanka-block' href='match/22.html'>
+                  <span>v</span>
+                  Sri Lanka
+                </a>
+              </td>
+              <td>1 March</td>
+              <td>
+                <div class='match-type'></div>
+                Westpac Stadium, Wellington
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-pakistan-block' href='match/23.html'>Pakistan</a>
+                <a class='team-zimbabwe-block' href='match/23.html'>
+                  <span>v</span>
+                  Zimbabwe
+                </a>
+              </td>
+              <td>1 March</td>
+              <td>
+                <div class='match-type'></div>
+                Brisbane Cricket Ground, Woolloongabba, Brisbane
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-south-africa-block' href='match/24.html'>South Africa</a>
+                <a class='team-ireland-block' href='match/24.html'>
+                  <span>v</span>
+                  Ireland
+                </a>
+              </td>
+              <td>3 March</td>
+              <td>
+                <div class='match-type'></div>
+                Manuka Oval, Canberra
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-pakistan-block' href='match/25.html'>Pakistan</a>
+                <a class='team-united-arab-emirates-block' href='match/25.html'>
+                  <span>v</span>
+                  United Arab Emirates
+                </a>
+              </td>
+              <td>4 March</td>
+              <td>
+                <div class='match-type'></div>
+                McLean Park, Napier
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-australia-block' href='match/26.html'>Australia</a>
+                <a class='team-afghanistan-block' href='match/26.html'>
+                  <span>v</span>
+                  Afghanistan
+                </a>
+              </td>
+              <td>4 March</td>
+              <td>
+                <div class='match-type'></div>
+                Western Australia Cricket Association Ground, Perth
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-scotland-block' href='match/27.html'>Scotland</a>
+                <a class='team-bangladesh-block' href='match/27.html'>
+                  <span>v</span>
+                  Bangladesh
+                </a>
+              </td>
+              <td>5 March</td>
+              <td>
+                <div class='match-type'></div>
+                Saxton Oval, Nelson
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-west-indies-block' href='match/28.html'>West Indies</a>
+                <a class='team-india-block' href='match/28.html'>
+                  <span>v</span>
+                  India
+                </a>
+              </td>
+              <td>6 March</td>
+              <td>
+                <div class='match-type'></div>
+                Western Australia Cricket Association Ground, Perth
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-pakistan-block' href='match/29.html'>Pakistan</a>
+                <a class='team-south-africa-block' href='match/29.html'>
+                  <span>v</span>
+                  South Africa
+                </a>
+              </td>
+              <td>7 March</td>
+              <td>
+                <div class='match-type'></div>
+                Eden Park, Auckland
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-ireland-block' href='match/30.html'>Ireland</a>
+                <a class='team-zimbabwe-block' href='match/30.html'>
+                  <span>v</span>
+                  Zimbabwe
+                </a>
+              </td>
+              <td>7 March</td>
+              <td>
+                <div class='match-type'></div>
+                Bellerive Oval, Hobart
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-afghanistan-block' href='match/31.html'>Afghanistan</a>
+                <a class='team-new-zealand-block' href='match/31.html'>
+                  <span>v</span>
+                  New Zealand
+                </a>
+              </td>
+              <td>8 March</td>
+              <td>
+                <div class='match-type'></div>
+                McLean Park, Napier
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-australia-block' href='match/32.html'>Australia</a>
+                <a class='team-sri-lanka-block' href='match/32.html'>
+                  <span>v</span>
+                  Sri Lanka
+                </a>
+              </td>
+              <td>8 March</td>
+              <td>
+                <div class='match-type'></div>
+                Sydney Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-bangladesh-block' href='match/33.html'>Bangladesh</a>
+                <a class='team-england-block' href='match/33.html'>
+                  <span>v</span>
+                  England
+                </a>
+              </td>
+              <td>9 March</td>
+              <td>
+                <div class='match-type'></div>
+                Adelaide Oval
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-ireland-block' href='match/34.html'>Ireland</a>
+                <a class='team-india-block' href='match/34.html'>
+                  <span>v</span>
+                  India
+                </a>
+              </td>
+              <td>10 March</td>
+              <td>
+                <div class='match-type'></div>
+                Seddon Park, Hamilton
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-sri-lanka-block' href='match/35.html'>Sri Lanka</a>
+                <a class='team-scotland-block' href='match/35.html'>
+                  <span>v</span>
+                  Scotland
+                </a>
+              </td>
+              <td>11 March</td>
+              <td>
+                <div class='match-type'></div>
+                Bellerive Oval, Hobart
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-south-africa-block' href='match/36.html'>South Africa</a>
+                <a class='team-united-arab-emirates-block' href='match/36.html'>
+                  <span>v</span>
+                  United Arab Emirates
+                </a>
+              </td>
+              <td>12 March</td>
+              <td>
+                <div class='match-type'></div>
+                Westpac Stadium, Wellington
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-bangladesh-block' href='match/37.html'>Bangladesh</a>
+                <a class='team-new-zealand-block' href='match/37.html'>
+                  <span>v</span>
+                  New Zealand
+                </a>
+              </td>
+              <td>13 March</td>
+              <td>
+                <div class='match-type'></div>
+                Seddon Park, Hamilton
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-afghanistan-block' href='match/38.html'>Afghanistan</a>
+                <a class='team-england-block' href='match/38.html'>
+                  <span>v</span>
+                  England
+                </a>
+              </td>
+              <td>13 March</td>
+              <td>
+                <div class='match-type'></div>
+                Sydney Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-zimbabwe-block' href='match/39.html'>Zimbabwe</a>
+                <a class='team-india-block' href='match/39.html'>
+                  <span>v</span>
+                  India
+                </a>
+              </td>
+              <td>14 March</td>
+              <td>
+                <div class='match-type'></div>
+                Eden Park, Auckland
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-scotland-block' href='match/40.html'>Scotland</a>
+                <a class='team-australia-block' href='match/40.html'>
+                  <span>v</span>
+                  Australia
+                </a>
+              </td>
+              <td>14 March</td>
+              <td>
+                <div class='match-type'></div>
+                Bellerive Oval, Hobart
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-united-arab-emirates-block' href='match/41.html'>United Arab Emirates</a>
+                <a class='team-west-indies-block' href='match/41.html'>
+                  <span>v</span>
+                  West Indies
+                </a>
+              </td>
+              <td>15 March</td>
+              <td>
+                <div class='match-type'></div>
+                McLean Park, Napier
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-ireland-block' href='match/42.html'>Ireland</a>
+                <a class='team-pakistan-block' href='match/42.html'>
+                  <span>v</span>
+                  Pakistan
+                </a>
+              </td>
+              <td>15 March</td>
+              <td>
+                <div class='match-type'></div>
+                Adelaide Oval
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-sri-lanka-block' href='match/43.html'>Sri Lanka</a>
+                <a class='team-south-africa-block' href='match/43.html'>
+                  <span>v</span>
+                  South Africa
+                </a>
+              </td>
+              <td>18 March</td>
+              <td>
+                <div class='match-type'>Quarterfinal</div>
+                Sydney Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-india-block' href='match/44.html'>India</a>
+                <a class='team-bangladesh-block' href='match/44.html'>
+                  <span>v</span>
+                  Bangladesh
+                </a>
+              </td>
+              <td>19 March</td>
+              <td>
+                <div class='match-type'>Quarterfinal</div>
+                Melbourne Cricket Ground
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-pakistan-block' href='match/45.html'>Pakistan</a>
+                <a class='team-australia-block' href='match/45.html'>
+                  <span>v</span>
+                  Australia
+                </a>
+              </td>
+              <td>20 March</td>
+              <td>
+                <div class='match-type'>Quarterfinal</div>
+                Adelaide Oval
+              </td>
+            </tr>
+            <tr>
+              <td class='teams'>
+                <a class='team-new-zealand-block' href='match/46.html'>New Zealand</a>
+                <a class='team-west-indies-block' href='match/46.html'>
+                  <span>v</span>
+                  West Indies
+                </a>
+              </td>
+              <td>21 March</td>
+              <td>
+                <div class='match-type'>Quarterfinal</div>
+                Westpac Stadium, Wellington
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class='left-col'>
+        <p>I recently discovered the game of cricket after moving to New Zealand (Go Blackcaps!), and set about exploring the game through a process of creating my own visualizations of the results of cricket matches. Consider these designs meditations on my new favorite sport.</p>
+        <p class='warning'>
+          <span>Note:</span>
+          This is a work in progress, built for my own entertainment and education. I am only posting it online because a couple of fellow cricket enthusiasts I've shown it to have asked me to share it. It's buggy in spots, sometimes gets totals wrong, and has only ever been viewed up to this point by me in Google Chrome on a MacBook retina display. It may look quite crap on anything else. You've been warned.
+        </p>
+        <p>The main chart I've been working on is a modified "Manhattan" graph, in that it's essentially a series of bars whose heights show the number of runs in each over. However, I've  broken down each bar to show a distinct mark for each ball bowled. Dot balls (deliveries for no runs) display as, well, a dot. A single run is a circle the height of two dots. Balls for more than one run display as an oblong shape proportionally as high as the number of runs (3 runs are the height of 3 balls, 4 run 4 balls high, etc), accounting for a small amount of padding between each mark. The tiny padding makes a huge visual difference, allowing each mark to read as distinct, even at the end of a long game.</p>
+        <p>Cricket is all about the steady accumulation of runs, and I've tried to stay true to that by showing an individual mark for every ball in play, but still letting the overall shape of the game be read at a glance.</p>
+        <a href='match/9.html'>
+          <img src='img/home-NZvENG.png'>
+        </a>
+        <p class='caption'>New Zealand's lopsided defeat of England</p>
+        <p>I've used the colours of each team to display batted runs. Extras that occur due to bowling faults (leg balls, wides, no balls, etc) are displayed in white, making them stand out at different visual value and making matches with wild bowling performances immediately stand out.</p>
+        <p>Wickets are in stop-sign red. I originally had wickets in full-height circles, same as a single run (the banner at the top of this page still shows the old design). I thought it looked awesome, but it bugged me that the vertical scale was off—an over with a hat-trick and three dot balls would have been the same height as a 3-run over—so now wickets have less visual prominence but the proper height for zero runs.</p>
+        <p>Behind the bars, I'm showing the current run rate as a yellow line. In the second innings, the first team's target rate shows as well. I've got some ideas about how to show the required run rate, so watch this space.</p>
+        <p>Using a bit of scripting, information about each ball call be viewed by pointing at it. we can highlight individual performances. This view immediately calls out an individual contribution, such as Chris Gayle's recent 216 run outing against Zimbabwe. On the Match pages, use the "Batting" and "Bowling" tabs on the right to select a player.</p>
+        <a href='match/15.html'>
+          <img src='img/home-Gayle.png'>
+        </a>
+        <p class='caption'>Chris Gayle's mammoth double century v. Zimbabwe</p>
+        <p>Below the overs chart, I've added a Head To Head chart, which shows the accumulation of runs between a given bowler and batsman. Bold red frames show wickets. Once again, every ball delivered makes a mark, and the size of the marks is proportional to the number of runs scored.</p>
+        <a href='match/9.html'>
+          <img src='img/home-Southee.png'>
+        </a>
+        <p class='caption'>Tim Southee's 7-wicket evisceration of England's batters</p>
+        <a href='match/15.html'>
+          <img src='img/home-GayleSamuels.png'>
+        </a>
+        <p class='caption'>Gayle & Samuels' ridiculous 372-run partnership</p>
+        <h3>What's next?</h3>
+        <p>I still have a long way to go, and there are many improvements I can make. Here are a few things I'd love to add:</p>
+        <ul>
+          <li>A free and open source of ball-by-ball info, so I can add commentary to each ball as well as a wagon wheel to show direction of play on the pitch. I'm pulling stats together from a few sources on the web, but I'm avoiding using any materials that aren't publicly available. In my own local version, for example, I'm inserting ESPNCricInfo commentary and displaying the last ball bowled, which is a great way to watch the game along with the radio. But it wouldn't be cool to repost their commentary here, so I've suppressed it.</li>
+          <li>Because the dots have a size and shape, the bars don't start at "0"; a score of 0 runs in an over starts at the height of a "maiden", or 6 dots. I'd like to add some shading and possibly a subtle scale to make this clearer.</li>
+          <li>Accurate totals. Somewhere in translation, I'm losing a few runs. Shoddy programming on my part, but should be fixed.</li>
+          <li>Player totals in the head to head section (at least total runs for batsmen and wickets and runs for bowlers).</li>
+          <li>The little highlighter panel on the right for bowlers and batsmen only works for the first innings and lacks totals.</li>
+          <li>A summary for the front page that shows only totals per over and match results. It would be cool to see mini "heat maps" so matches can be compared.</li>
+          <li>I have no idea what this looks like in other browsers, and imagine it's a mess on mobiles and tablets. This is totally fixable.</li>
+          <li>These visualisations also work much better for limited-overs cricket than for Tests. I created this project mainly to help me watch 50-over one-day internationals, and it also works for Twenty20. It'll be interesting to see if the clarity that I get with 50 overs fitting on a screen translates to longer contests. I haven't attempted a Test yet, and I think there will be a lot of design challenges to solve.</li>
+          <li>I plan to release some of the code that</li>
+        </ul>
+        <p>Would love to hear what folks think about these. I'm <a href="https://twitter.com/mlascarides">@mlascarides</a> on Twitter. Give a shout!</p>
+      </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-3661229-7', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
