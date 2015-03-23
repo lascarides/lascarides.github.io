@@ -21,7 +21,9 @@ a {
   background: #444;
   padding: 0.5em;
   margin: 0 0 1em;
-  z-index: 2000; }
+  z-index: 2000;
+  box-sizing: border-box;
+  height: 3em; }
   .header .match-nav {
     padding: 0.5em;
     position: absolute;
@@ -333,9 +335,8 @@ h2, h3, h4 {
 h2.hh {
   padding: 0.3em;
   text-align: center;
-  margin: 1em 0 0.5em;
-  background: #93a679;
-  border-radius: 10px; }
+  margin: 0 0 0.5em;
+  background: #879b6a; }
 
 h3.hh {
   text-align: center;
@@ -444,7 +445,7 @@ table.panel {
       background: #ff9; }
 
 .graph {
-  float: left;
+  margin: 3em 0 0 0;
   width: 80%;
   overflow-x: auto; }
 
@@ -523,11 +524,13 @@ table.panel {
 
 .ball2 {
   height: 26px;
-  padding-top: 3.6px; }
+  padding-top: 3.6px;
+  background-position: 50% 100%; }
 
 .ball3 {
   padding-top: 9.6px;
-  height: 40px; }
+  height: 40px;
+  background-position: 50% 90%; }
 
 .ball4 {
   height: 54px;
@@ -653,9 +656,10 @@ table.fixture-timeline {
     height: 12px; }
 
 .sidebar {
-  width: 18%;
-  float: right;
-  margin: 0; }
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 4em; }
   .sidebar .match-info {
     padding: 0 0 1em;
     color: #444; }
@@ -680,7 +684,6 @@ table.fixture-timeline {
     padding: 1em 1em 1.5em 1em;
     color: #7a8d5f;
     font-weight: 300;
-    border-radius: 0 1em 1em 0;
     background: #f6f7f4; }
     .sidebar .comment-section h3, .sidebar .comment-section h4 {
       color: #222; }
