@@ -439,7 +439,9 @@ table.panel {
   width: 100%; }
   table.panel td {
     vertical-align: top;
-    text-align: center; }
+    text-align: left; }
+    table.panel td .panel-highlight {
+      background: #ff9; }
 
 .graph {
   float: left;
@@ -564,6 +566,8 @@ table.fixture {
       background-image: linear-gradient(top, bottom, #bb9d88, #b8c4a7); }
   table.fixture td:hover {
     background: #c5ceb7; }
+  table.fixture td.wicket-over:hover {
+    background: #bb9d88 !important; }
   table.fixture th {
     color: #999;
     border: 0px;
@@ -743,3 +747,21 @@ table.fixture-timeline {
   height: 28px;
   width: 42px;
   padding-top: 3.5px; }
+
+.footer {
+  text-align: center;
+  padding: 1em 0 6em;
+  background: rgba(0, 0, 0, 0.3);
+  clear: both;
+  margin: 3em 0 0 0; }
+  .footer a {
+    color: #fff; }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .home .right-col {
+    float: none;
+    width: 100%; }
+  .home .left-col {
+    position: relative;
+    width: 100%; } }
