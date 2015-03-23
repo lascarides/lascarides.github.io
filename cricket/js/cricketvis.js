@@ -56,6 +56,7 @@ function setupCommentaryBox() {
 	$('.sidebar .active').show();
 	$('.sidebar-nav a').click(function(){
 		$('.ball').removeClass('ball-dimmer');
+		$('.panel div').removeClass('panel-highlight');
 		$('.comment-section').hide();
 		$('.sidebar-nav a').removeClass('active');
 		$(this).addClass('active');
@@ -67,11 +68,14 @@ function setupCommentaryBox() {
 function setupHighlighters(hilite) {
 	$('.' + hilite).click(function(e){
 		var person = $(e.target).text();
+		$('.panel div').removeClass('panel-highlight');
+		$(this).addClass('panel-highlight');
 		$('.ball').removeClass('ball-hilite').addClass('ball-dimmer');		
 		$('.ball[data-' + hilite + '="' + person + '"]').removeClass('ball-dimmer').addClass('ball-hilite');
 	});
 	$('.' + hilite + '-all').click(function(e){
 		var person = $(e.target).text();
+		$('.panel div').removeClass('panel-highlight');
 		$('.ball').removeClass('ball-dimmer');		
 		$('.ball').removeClass('ball-hilite');
 	});
@@ -132,7 +136,6 @@ function calcTotals() {
 
 		// Find last batsman & bowler
 		$('.ball').each(function(){
-			score += parseInt($(this).attr('data-runs'));
 			if (batsman != $(this).attr('data-batsman')) {
 				runner = batsman;
 				batsman = $(this).attr('data-batsman');
