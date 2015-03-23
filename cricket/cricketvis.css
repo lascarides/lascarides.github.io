@@ -439,9 +439,7 @@ table.panel {
   width: 100%; }
   table.panel td {
     vertical-align: top;
-    text-align: left; }
-    table.panel td .panel-highlight {
-      background: #ff9; }
+    text-align: center; }
 
 .graph {
   float: left;
@@ -566,8 +564,6 @@ table.fixture {
       background-image: linear-gradient(top, bottom, #bb9d88, #b8c4a7); }
   table.fixture td:hover {
     background: #c5ceb7; }
-  table.fixture td.wicket-over:hover {
-    background: #bb9d88 !important; }
   table.fixture th {
     color: #999;
     border: 0px;
