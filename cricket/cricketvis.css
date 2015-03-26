@@ -8,7 +8,7 @@ body {
   font-weight: 300; }
 
 a {
-  color: #aa0000;
+  color: #cc0000;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -473,6 +473,10 @@ table.panel {
   background-color: #ff0 !important;
   color: #000; }
 
+.ball-wicket:hover {
+  background-color: #e60000 !important;
+  color: #000; }
+
 .ball-dot {
   position: relative;
   /*
@@ -517,10 +521,9 @@ table.panel {
   color: #6e6e6e; }
 
 .ball-wicket {
-  background: url(img/wicket.png) 50% 50% no-repeat #aa0000;
+  background: url(img/wicket.png) 50% 50% no-repeat #cc0000;
   background-size: contain;
-  border: 2px solid #aa0000;
-  border-radius: 12px; }
+  border-radius: 0; }
 
 .ball2 {
   height: 26px;
@@ -542,7 +545,8 @@ table.panel {
 
 .ball6 {
   height: 82px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  font-weight: 700; }
 
 table.fixture {
   margin: 0;
@@ -616,7 +620,7 @@ table.fixture {
   table.fixture tr.overs th {
     text-align: right; }
   table.fixture tr.overs td.current {
-    color: #aa0000; }
+    color: #cc0000; }
   table.fixture tr.innings-chase td, table.fixture tr.innings-chase th {
     position: relative;
     vertical-align: bottom; }
@@ -750,6 +754,17 @@ table.fixture-timeline {
   height: 28px;
   width: 42px;
   padding-top: 3.5px; }
+
+table.partnerships {
+  width: 100%; }
+  table.partnerships td, table.partnerships th {
+    padding: 0.5em;
+    margin: 0;
+    border: 0 !important; }
+  table.partnerships td {
+    text-align: left; }
+  table.partnerships .partnership-top td, table.partnerships .partnership-top th {
+    border-top: 3px solid #879b6a !important; }
 
 .footer {
   text-align: center;
