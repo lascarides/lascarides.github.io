@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
+@import url(http://fonts.googleapis.com/css?family=Rokkitt:100,400);
 body {
   background: url(img/bg.png) #acba98;
   color: #fff;
   font-family: Oswald, DIN, sans-serif;
-  margin: 0;
+  margin: 3em 0 0 0;
   font-weight: 300; }
 
 a {
@@ -47,7 +47,7 @@ a {
 
 .team-bangladesh-block {
   background: #006a4e !important;
-  color: #e97818; }
+  color: #e97818 !important; }
   .team-bangladesh-block a {
     color: #e97818; }
 
@@ -67,7 +67,7 @@ a {
 
 .team-pakistan-block {
   background: #084b01 !important;
-  color: white; }
+  color: white !important; }
   .team-pakistan-block a {
     color: white; }
 
@@ -87,7 +87,7 @@ a {
 
 .team-new-zealand-block {
   background: #012247 !important;
-  color: white; }
+  color: white !important; }
   .team-new-zealand-block a {
     color: white; }
 
@@ -107,7 +107,7 @@ a {
 
 .team-england-block {
   background: white !important;
-  color: #aa0000; }
+  color: #aa0000 !important; }
   .team-england-block a {
     color: #aa0000; }
 
@@ -127,7 +127,7 @@ a {
 
 .team-india-block {
   background: #0000aa !important;
-  color: #ff9900; }
+  color: #ff9900 !important; }
   .team-india-block a {
     color: #ff9900; }
 
@@ -147,7 +147,7 @@ a {
 
 .team-scotland-block {
   background: #0065bd !important;
-  color: white; }
+  color: white !important; }
   .team-scotland-block a {
     color: white; }
 
@@ -167,7 +167,7 @@ a {
 
 .team-united-arab-emirates-block {
   background: #767682 !important;
-  color: white; }
+  color: white !important; }
   .team-united-arab-emirates-block a {
     color: white; }
 
@@ -187,7 +187,7 @@ a {
 
 .team-south-africa-block {
   background: #008751 !important;
-  color: #fcd116; }
+  color: #fcd116 !important; }
   .team-south-africa-block a {
     color: #fcd116; }
 
@@ -207,7 +207,7 @@ a {
 
 .team-zimbabwe-block {
   background: #f62848 !important;
-  color: white; }
+  color: white !important; }
   .team-zimbabwe-block a {
     color: white; }
 
@@ -227,7 +227,7 @@ a {
 
 .team-australia-block {
   background: #fcd116 !important;
-  color: #008751; }
+  color: #008751 !important; }
   .team-australia-block a {
     color: #008751; }
 
@@ -247,7 +247,7 @@ a {
 
 .team-ireland-block {
   background: #4f7843 !important;
-  color: white; }
+  color: white !important; }
   .team-ireland-block a {
     color: white; }
 
@@ -267,7 +267,7 @@ a {
 
 .team-west-indies-block {
   background: #790d1a !important;
-  color: #78e3ff; }
+  color: #78e3ff !important; }
   .team-west-indies-block a {
     color: #78e3ff; }
 
@@ -287,7 +287,7 @@ a {
 
 .team-sri-lanka-block {
   background: #034da2 !important;
-  color: #feeb4b; }
+  color: #feeb4b !important; }
   .team-sri-lanka-block a {
     color: #feeb4b; }
 
@@ -307,7 +307,7 @@ a {
 
 .team-afghanistan-block {
   background: #000099 !important;
-  color: white; }
+  color: white !important; }
   .team-afghanistan-block a {
     color: white; }
 
@@ -321,26 +321,29 @@ a {
   height: 1px !important; }
 
 h1 {
-  font-weight: 300;
+  font-weight: 700;
   color: #555;
-  margin: 0; }
-  h1 .teamOne, h1 .teamTwo {
-    font-weight: 400; }
+  margin: 0;
+  font-family: Oswald, DIN, sans-serif;
+  text-transform: uppercase; }
 
 h2, h3, h4 {
+  font-family: Oswald, DIN, sans-serif;
   font-weight: 300;
   color: #fff;
   margin: 0; }
 
 h2.hh {
-  padding: 0.3em;
+  padding: 2em 1em 2em;
   text-align: center;
-  margin: 0 0 0.5em;
-  background: #879b6a; }
+  margin: 0;
+  background: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase; }
 
 h3.hh {
   text-align: center;
-  margin: 0.5em 0; }
+  margin: 0 0 0;
+  padding: 1em; }
 
 .banner {
   margin: 0 0 2em;
@@ -367,8 +370,9 @@ h3.hh {
   padding: 1em;
   margin: 0;
   text-transform: uppercase;
-  font-weight: 700;
-  text-align: center; }
+  font-weight: 400;
+  text-align: center;
+  font-family: Oswald, DIN, sans-serif; }
   .home .teams a span {
     font-weight: 300;
     font-size: 0.8em;
@@ -391,14 +395,14 @@ h3.hh {
   color: #ff0;
   text-transform: uppercase; }
 .home p {
-  font-family: Lusitana, DIN, sans-serif;
+  font-family: Rokkitt, DIN, sans-serif;
   color: #333;
   margin: 0;
   background: #acba98;
   padding: 0.5em;
   line-height: 1.6; }
   .home p.caption {
-    font-family: Oswald, DIN, sans-serif;
+    font-family: Junction, DIN, sans-serif;
     padding: 0 1.2em;
     text-align: center;
     margin: 0.5em 0 2em;
@@ -416,7 +420,7 @@ h3.hh {
       text-transform: uppercase;
       color: #a00; }
 .home li {
-  font-family: Lusitana, DIN, sans-serif;
+  font-family: Rokkitt, DIN, sans-serif;
   color: #333; }
 .home img {
   width: 100%;
@@ -445,8 +449,7 @@ table.panel {
       background: #ff9; }
 
 .graph {
-  margin: 3em 0 0 0;
-  width: 80%;
+  margin: 0 18em 0 0;
   overflow-x: auto; }
 
 .current-batsman {
@@ -660,15 +663,17 @@ table.fixture-timeline {
     height: 12px; }
 
 .sidebar {
-  width: 20%;
+  width: 18em;
   position: absolute;
   right: 0;
   top: 4em; }
   .sidebar .match-info {
-    padding: 0 0 1em;
+    padding: 0 1em 1em;
+    height: 8em;
+    box-sizing: border-box;
     color: #444; }
-    .sidebar .match-info h3 {
-      color: #444; }
+    .sidebar .match-info h3, .sidebar .match-info h4 {
+      color: #fff; }
   .sidebar .sidebar-nav a {
     display: inline-block;
     padding: 0.3em 1em;
@@ -754,13 +759,23 @@ table.fixture-timeline {
   height: 28px;
   width: 42px;
   padding-top: 3.5px; }
+.bb .ball-wicket {
+  border-radius: 0;
+  height: 28px;
+  width: 28px; }
 
 table.partnerships {
-  width: 100%; }
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto !important; }
   table.partnerships td, table.partnerships th {
     padding: 0.5em;
     margin: 0;
-    border: 0 !important; }
+    border: 0 !important;
+    min-width: 8em; }
+    table.partnerships td h1, table.partnerships th h1 {
+      margin: 0;
+      color: #fff; }
   table.partnerships td {
     text-align: left; }
   table.partnerships .partnership-top td, table.partnerships .partnership-top th {
@@ -768,10 +783,10 @@ table.partnerships {
 
 .footer {
   text-align: center;
-  padding: 1em 0 6em;
+  padding: 6em 0;
   background: rgba(0, 0, 0, 0.3);
   clear: both;
-  margin: 3em 0 0 0; }
+  margin: 0 0 0 0; }
   .footer a {
     color: #fff; }
 

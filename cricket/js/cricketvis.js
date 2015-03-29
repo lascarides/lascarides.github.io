@@ -70,8 +70,8 @@ function setupHighlighters(hilite) {
 		var person = $(e.target).text();
 		$('.panel div').removeClass('panel-highlight');
 		$(this).addClass('panel-highlight');
-		$('.ball').removeClass('ball-hilite').addClass('ball-dimmer');		
-		$('.ball[data-' + hilite + '="' + person + '"]').removeClass('ball-dimmer').addClass('ball-hilite');
+		$('.fixture .ball').removeClass('ball-hilite').addClass('ball-dimmer');		
+		$('.fixture .ball[data-' + hilite + '="' + person + '"]').removeClass('ball-dimmer').addClass('ball-hilite');
 	});
 	$('.' + hilite + '-all').click(function(e){
 		var person = $(e.target).text();
