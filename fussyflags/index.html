@@ -1,0 +1,1322 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>On #RedPeak and flag fussiness, quantified</title>
+  <meta name="description" content="An investigation of simplicity in flag design and the NZ Flag debate">
+  <meta name="author" content="Michael Lascarides">
+
+	<style type="text/css">
+	
+		@import url(https://fonts.googleapis.com/css?family=Raleway:300,800);
+	
+		body {
+			background: #fff;
+			margin: 2em;
+			color: #444;
+			font-size: 16px;
+			font-family: 'Raleway';
+		}
+	
+		.main {
+			width: 24rem;
+			margin: 2rem;
+			float: left; 
+		}
+
+		h1 {
+			font-weight: 800;
+			text-align: center;
+		}
+		h2 {
+			font-weight: 300;
+			text-align: center;
+		}
+		h3 {
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 4rem;
+		}
+		small {
+			color: #999;
+		}
+
+		.flags {
+			margin: 2rem;
+			text-align: center;
+		}
+		
+		.flag {
+			display: inline-block;
+			height: 9rem;
+			width: 9rem;
+			text-align: center;
+			border: 10px solid #fff;
+		}
+		.flag img {
+			max-width: 60%;
+			max-height: 40%;
+			display: block;
+			border: 1px solid #eee;
+			margin: 0.2rem auto;
+			background: white;
+		}
+		.nzflag {
+			border: 10px solid #ff0;
+			font-weight: 800;
+		}
+		p, li {
+			line-height: 1.7;
+		}
+
+
+	</style>
+	
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+	<div class="main">
+	
+		<h1>All of the world's flags, ranked by fussiness</h1>
+		<h2>From least fussy to most fussy, measured in Palaus</h2>
+		<h3>By Michael Lascarides</h3>
+	
+		<p>There are essentially two ways to draw things on a computer. One is <strong>bitmaps</strong>, the way your digital camera does it, by putting little dots on the screen. The bigger the picture, the more dots you need, and the bigger the filesize. But for a given quality, everything you take a picture of is more or less the same filesize.</p>
+
+		<p>However, there's another way of drawing, called <strong>vector graphics</strong>. This is the way logos, architectural drawings, and other "hard-edged", non-photographic images are made. In vectors, every line and flourish requires a bit of code. The more shapes, the more code. The advantage is that, for simple images, the filesize can remain small no matter how big the final output is. A properly-constructed vector image can be blown up to billboard size with no drop in quality.</p>
+		
+		<p>Given that every mark in a vector image adds a bit to the file, the size of a vector file is a good indication of its complicatedness or fussiness. So when designers talk about a design being overly complicated, it's not a matter of taste, but actually something we can measure.</p>
+		
+		<p>I've been thinking a lot about this in the context of the <a href="http://www.theguardian.com/world/2015/sep/04/new-zealanders-offered-flag-shortlist-ask-can-we-have-this-one-instead">New Zealand flag debate</a>, and the rivalry that has broken out between Kyle Lockwood's ferns and <a href="http://aotearoaflag.tumblr.com/">Aaron Dustin's "Red Peak"</a>. Full disclosure: I am totally on <a href="https://twitter.com/hashtag/RedPeak">team #RedPeak</a> for many many reasons besides filesize. But to scratch an itch, I've downloaded a set of Scalable Vector Graphic (SVG) world flags (thanks to <a href="https://github.com/seanherron/Flag-Webicons">Sean Herron's Flag-Webicons Github repository</a>), and I thought I'd spend an hour visualising the different world flags ranked by the filesize of their SVG representation, adding <a href="https://commons.wikimedia.org/wiki/File:Kyle_Lockwood%27s_New_Zealand_Flag.svg">Lockwood's design from Wikimedia Commons</a>.</p>
+		
+		<p>This is unscientific as all heck but kinda fun. In order to display the difference between the contenders, I've invented a unit of vexillological fussiness called a Palau, after the simplest flag in our survey. Think of a Palau as a measure of the number of individual pencil moves needed to draw a flag. All other flags are presented as multiples of Palau (so 3 Palaus is 3 times more fussy than the simplest flag).</p>
+		
+		<p>A few observations:</p>
+		
+		<ul>
+		<li>I don't know why Palau is smaller than Japan or Bangladesh. There are some tiny variations in the files, I guess.</li>
+		<li>The fussiest flag in the world is Serbia's, weighing in at an astonishing 8.68 kiloPalaus. That seal is IMPRESSIVE, though vexillologists will say it's very bad form.</li>
+		<li>More than a quarter (56 of 198) of all flags in the world are less than 2 Palaus of fussiness. "Abstract" simplicity isn't radical, but very common.</li>
+		<li>Red Peak is extremely simple (#14 on the list at a mere 1.39 Palaus). When I couldn't find a SVG of this brand new flag on the interwebs, I drew one myself in code. Took me 3 minutes.</li>
+		<li>This exercise makes me realize how distinct Red Peak would be on the world stage. The upward triangle is such a simple motif, but has rarely been used.</li>
+		<li>The current NZ flag lags in 145th place at 14.39 Palaus.</li>
+		<li>The Lockwood fern is far more complicated, at an astonishing 71.62 Palaus, bringing up the rear among what <a href="http://www.ted.com/talks/roman_mars_why_city_flags_may_be_the_worst_designed_thing_you_ve_never_noticed?language=en">Roman Mars has memorably called "SOB's"</a>, for "seals on a bedsheet".</li>
+		</ul>
+		
+		<p>This actually matters. All those curves in that fern are hard to draw and hard to get right. If the fern is adopted as the new flag, be prepared to see it drawn wrong, over and over a again. Contrast this with <a href="http://aotearoaflag.tumblr.com">Dustin's instantly memorable instructions</a> for drawing his flag.</p> 
+
+		<p>Anyway, this insomnia project has rambled far enough. Here's hoping design sense prevails.</p> 
+	
+
+	</div>
+
+	<div class="flags">	
+
+		<div class="flag">
+		#1: 
+		PALAU
+		<img src='svg/palau.svg' alt=''>
+		<span>1.0 Palaus</span>
+		</div>
+		<div class="flag">
+		#2: 
+		UKRAINE
+		<img src='svg/ukraine.svg' alt=''>
+		<span>1.03 Palaus</span>
+		</div>
+		<div class="flag">
+		#3: 
+		JAPAN
+		<img src='svg/japan.svg' alt=''>
+		<span>1.19 Palaus</span>
+		</div>
+		<div class="flag">
+		#4: 
+		BELGIUM
+		<img src='svg/belgium.svg' alt=''>
+		<span>1.22 Palaus</span>
+		</div>
+		<div class="flag">
+		#5: 
+		AUSTRIA
+		<img src='svg/austria.svg' alt=''>
+		<span>1.23 Palaus</span>
+		</div>
+		<div class="flag">
+		#6: 
+		BANGLADESH
+		<img src='svg/bangladesh.svg' alt=''>
+		<span>1.24 Palaus</span>
+		</div>
+		<div class="flag">
+		#7: 
+		LATVIA
+		<img src='svg/latvia.svg' alt=''>
+		<span>1.26 Palaus</span>
+		</div>
+		<div class="flag">
+		#8: 
+		NETHERLANDS
+		<img src='svg/netherlands.svg' alt=''>
+		<span>1.27 Palaus</span>
+		</div>
+		<div class="flag">
+		#9: 
+		JAMAICA
+		<img src='svg/jamaica.svg' alt=''>
+		<span>1.34 Palaus</span>
+		</div>
+		<div class="flag">
+		#10: 
+		MONACO
+		<img src='svg/monaco.svg' alt=''>
+		<span>1.35 Palaus</span>
+		</div>
+		<div class="flag">
+		#11: 
+		INDONESIA
+		<img src='svg/indonesia.svg' alt=''>
+		<span>1.38 Palaus</span>
+		</div>
+		<div class="flag">
+		#12: 
+		POLAND
+		<img src='svg/poland.svg' alt=''>
+		<span>1.39 Palaus</span>
+		</div>
+		<div class="flag">
+		#13: 
+		NIGERIA
+		<img src='svg/nigeria.svg' alt=''>
+		<span>1.39 Palaus</span>
+		</div>
+		<div class="flag nzflag">
+		#14: 
+		NZ REDPEAK
+		<img src='svg/nz-redpeak.svg' alt=''>
+		<span>1.39 Palaus</span>
+		</div>
+		<div class="flag">
+		#15: 
+		FRANCE
+		<img src='svg/france.svg' alt=''>
+		<span>1.41 Palaus</span>
+		</div>
+		<div class="flag">
+		#16: 
+		GABON
+		<img src='svg/gabon.svg' alt=''>
+		<span>1.45 Palaus</span>
+		</div>
+		<div class="flag">
+		#17: 
+		ROMANIA
+		<img src='svg/romania.svg' alt=''>
+		<span>1.49 Palaus</span>
+		</div>
+		<div class="flag">
+		#18: 
+		BOLIVIA
+		<img src='svg/bolivia.svg' alt=''>
+		<span>1.51 Palaus</span>
+		</div>
+		<div class="flag">
+		#19: 
+		RUSSIA
+		<img src='svg/russia.svg' alt=''>
+		<span>1.51 Palaus</span>
+		</div>
+		<div class="flag">
+		#20: 
+		BAHRAIN
+		<img src='svg/bahrain.svg' alt=''>
+		<span>1.53 Palaus</span>
+		</div>
+		<div class="flag">
+		#21: 
+		THAILAND
+		<img src='svg/thailand.svg' alt=''>
+		<span>1.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#22: 
+		BAHAMAS
+		<img src='svg/bahamas.svg' alt=''>
+		<span>1.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#23: 
+		LITHUANIA
+		<img src='svg/lithuania.svg' alt=''>
+		<span>1.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#24: 
+		ITALY
+		<img src='svg/italy.svg' alt=''>
+		<span>1.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#25: 
+		IRELAND
+		<img src='svg/ireland.svg' alt=''>
+		<span>1.56 Palaus</span>
+		</div>
+		<div class="flag">
+		#26: 
+		FINLAND
+		<img src='svg/finland.svg' alt=''>
+		<span>1.56 Palaus</span>
+		</div>
+		<div class="flag">
+		#27: 
+		CZECH REPUBLIC
+		<img src='svg/czech-republic.svg' alt=''>
+		<span>1.56 Palaus</span>
+		</div>
+		<div class="flag">
+		#28: 
+		YEMEN
+		<img src='svg/yemen.svg' alt=''>
+		<span>1.57 Palaus</span>
+		</div>
+		<div class="flag">
+		#29: 
+		HUNGARY
+		<img src='svg/hungary.svg' alt=''>
+		<span>1.57 Palaus</span>
+		</div>
+		<div class="flag">
+		#30: 
+		LAOS
+		<img src='svg/laos.svg' alt=''>
+		<span>1.59 Palaus</span>
+		</div>
+		<div class="flag">
+		#31: 
+		ARMENIA
+		<img src='svg/armenia.svg' alt=''>
+		<span>1.59 Palaus</span>
+		</div>
+		<div class="flag">
+		#32: 
+		LUXEMBOURG
+		<img src='svg/luxembourg.svg' alt=''>
+		<span>1.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#33: 
+		SWITZERLAND
+		<img src='svg/switzerland.svg' alt=''>
+		<span>1.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#34: 
+		SWEDEN
+		<img src='svg/sweden.svg' alt=''>
+		<span>1.63 Palaus</span>
+		</div>
+		<div class="flag">
+		#35: 
+		BULGARIA
+		<img src='svg/bulgaria.svg' alt=''>
+		<span>1.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#36: 
+		MALI
+		<img src='svg/mali.svg' alt=''>
+		<span>1.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#37: 
+		ICELAND
+		<img src='svg/iceland.svg' alt=''>
+		<span>1.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#38: 
+		GHANA
+		<img src='svg/ghana.svg' alt=''>
+		<span>1.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#39: 
+		SIERRA LEONE
+		<img src='svg/sierra-leone.svg' alt=''>
+		<span>1.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#40: 
+		DENMARK
+		<img src='svg/denmark.svg' alt=''>
+		<span>1.66 Palaus</span>
+		</div>
+		<div class="flag">
+		#41: 
+		NIGER
+		<img src='svg/niger.svg' alt=''>
+		<span>1.68 Palaus</span>
+		</div>
+		<div class="flag">
+		#42: 
+		ESTONIA
+		<img src='svg/estonia.svg' alt=''>
+		<span>1.72 Palaus</span>
+		</div>
+		<div class="flag">
+		#43: 
+		BOTSWANA
+		<img src='svg/botswana.svg' alt=''>
+		<span>1.72 Palaus</span>
+		</div>
+		<div class="flag">
+		#44: 
+		GUINEA
+		<img src='svg/guinea.svg' alt=''>
+		<span>1.73 Palaus</span>
+		</div>
+		<div class="flag">
+		#45: 
+		SEYCHELLES
+		<img src='svg/seychelles.svg' alt=''>
+		<span>1.75 Palaus</span>
+		</div>
+		<div class="flag">
+		#46: 
+		TONGA
+		<img src='svg/tonga.svg' alt=''>
+		<span>1.77 Palaus</span>
+		</div>
+		<div class="flag">
+		#47: 
+		THE GAMBIA
+		<img src='svg/the-gambia.svg' alt=''>
+		<span>1.81 Palaus</span>
+		</div>
+		<div class="flag">
+		#48: 
+		KUWAIT
+		<img src='svg/kuwait.svg' alt=''>
+		<span>1.81 Palaus</span>
+		</div>
+		<div class="flag">
+		#49: 
+		SAINT LUCIA
+		<img src='svg/saint-lucia.svg' alt=''>
+		<span>1.85 Palaus</span>
+		</div>
+		<div class="flag">
+		#50: 
+		BENIN
+		<img src='svg/benin.svg' alt=''>
+		<span>1.86 Palaus</span>
+		</div>
+		<div class="flag">
+		#51: 
+		UNITED ARAB EMIRATES
+		<img src='svg/united-arab-emirates.svg' alt=''>
+		<span>1.87 Palaus</span>
+		</div>
+		<div class="flag">
+		#52: 
+		SUDAN
+		<img src='svg/sudan.svg' alt=''>
+		<span>1.9 Palaus</span>
+		</div>
+		<div class="flag">
+		#53: 
+		GREECE
+		<img src='svg/greece.svg' alt=''>
+		<span>1.9 Palaus</span>
+		</div>
+		<div class="flag">
+		#54: 
+		MAURITIUS
+		<img src='svg/mauritius.svg' alt=''>
+		<span>1.93 Palaus</span>
+		</div>
+		<div class="flag">
+		#55: 
+		CHAD
+		<img src='svg/chad.svg' alt=''>
+		<span>1.95 Palaus</span>
+		</div>
+		<div class="flag">
+		#56: 
+		MADAGASCAR
+		<img src='svg/madagascar.svg' alt=''>
+		<span>1.96 Palaus</span>
+		</div>
+		<div class="flag">
+		#57: 
+		TANZANIA
+		<img src='svg/tanzania.svg' alt=''>
+		<span>2.09 Palaus</span>
+		</div>
+		<div class="flag">
+		#58: 
+		COLOMBIA
+		<img src='svg/colombia.svg' alt=''>
+		<span>2.15 Palaus</span>
+		</div>
+		<div class="flag">
+		#59: 
+		PERU
+		<img src='svg/peru.svg' alt=''>
+		<span>2.16 Palaus</span>
+		</div>
+		<div class="flag">
+		#60: 
+		LIBYA
+		<img src='svg/libya.svg' alt=''>
+		<span>2.18 Palaus</span>
+		</div>
+		<div class="flag">
+		#61: 
+		MACEDONIA
+		<img src='svg/macedonia.svg' alt=''>
+		<span>2.22 Palaus</span>
+		</div>
+		<div class="flag">
+		#62: 
+		SURINAME
+		<img src='svg/suriname.svg' alt=''>
+		<span>2.23 Palaus</span>
+		</div>
+		<div class="flag">
+		#63: 
+		TURKEY
+		<img src='svg/turkey.svg' alt=''>
+		<span>2.26 Palaus</span>
+		</div>
+		<div class="flag">
+		#64: 
+		GUYANA
+		<img src='svg/guyana.svg' alt=''>
+		<span>2.31 Palaus</span>
+		</div>
+		<div class="flag">
+		#65: 
+		REPUBLIC OF THE CONGO
+		<img src='svg/republic-of-the-congo.svg' alt=''>
+		<span>2.41 Palaus</span>
+		</div>
+		<div class="flag">
+		#66: 
+		COTE DIVOIRE
+		<img src='svg/cote-divoire.svg' alt=''>
+		<span>2.43 Palaus</span>
+		</div>
+		<div class="flag">
+		#67: 
+		TRINIDAD AND TOBAGO
+		<img src='svg/trinidad-and-tobago.svg' alt=''>
+		<span>2.45 Palaus</span>
+		</div>
+		<div class="flag">
+		#68: 
+		PALESTINE
+		<img src='svg/palestine.svg' alt=''>
+		<span>2.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#69: 
+		COSTA RICA
+		<img src='svg/costa-rica.svg' alt=''>
+		<span>2.7 Palaus</span>
+		</div>
+		<div class="flag">
+		#70: 
+		TUNISIA
+		<img src='svg/tunisia.svg' alt=''>
+		<span>2.84 Palaus</span>
+		</div>
+		<div class="flag">
+		#71: 
+		GERMANY
+		<img src='svg/germany.svg' alt=''>
+		<span>2.85 Palaus</span>
+		</div>
+		<div class="flag">
+		#72: 
+		BOSNIA AND HERZEGOVINA
+		<img src='svg/bosnia-and-herzegovina.svg' alt=''>
+		<span>2.91 Palaus</span>
+		</div>
+		<div class="flag">
+		#73: 
+		SAINT VINCENT AND THE GRENADINES
+		<img src='svg/saint-vincent-and-the-grenadines.svg' alt=''>
+		<span>2.91 Palaus</span>
+		</div>
+		<div class="flag">
+		#74: 
+		NORWAY
+		<img src='svg/norway.svg' alt=''>
+		<span>2.94 Palaus</span>
+		</div>
+		<div class="flag">
+		#75: 
+		UNITED KINGDOM
+		<img src='svg/united-kingdom.svg' alt=''>
+		<span>2.97 Palaus</span>
+		</div>
+		<div class="flag">
+		#76: 
+		QATAR
+		<img src='svg/qatar.svg' alt=''>
+		<span>3.01 Palaus</span>
+		</div>
+		<div class="flag">
+		#77: 
+		DEMOCRATIC REPUBLIC OF THE CONGO
+		<img src='svg/democratic-republic-of-the-congo.svg' alt=''>
+		<span>3.08 Palaus</span>
+		</div>
+		<div class="flag">
+		#78: 
+		MALDIVES
+		<img src='svg/maldives.svg' alt=''>
+		<span>3.18 Palaus</span>
+		</div>
+		<div class="flag">
+		#79: 
+		SOMALIA
+		<img src='svg/somalia.svg' alt=''>
+		<span>3.35 Palaus</span>
+		</div>
+		<div class="flag">
+		#80: 
+		DJIBOUTI
+		<img src='svg/djibouti.svg' alt=''>
+		<span>3.39 Palaus</span>
+		</div>
+		<div class="flag">
+		#81: 
+		JORDAN
+		<img src='svg/jordan.svg' alt=''>
+		<span>3.44 Palaus</span>
+		</div>
+		<div class="flag">
+		#82: 
+		CHILE
+		<img src='svg/chile.svg' alt=''>
+		<span>3.46 Palaus</span>
+		</div>
+		<div class="flag">
+		#83: 
+		REPUBLIC OF CHINA
+		<img src='svg/republic-of-china.svg' alt=''>
+		<span>3.52 Palaus</span>
+		</div>
+		<div class="flag">
+		#84: 
+		EAST TIMOR
+		<img src='svg/east-timor.svg' alt=''>
+		<span>3.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#85: 
+		SOUTH AFRICA
+		<img src='svg/south-africa.svg' alt=''>
+		<span>3.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#86: 
+		SYRIA
+		<img src='svg/syria.svg' alt=''>
+		<span>3.73 Palaus</span>
+		</div>
+		<div class="flag">
+		#87: 
+		MAURITANIA
+		<img src='svg/mauritania.svg' alt=''>
+		<span>3.8 Palaus</span>
+		</div>
+		<div class="flag">
+		#88: 
+		BURKINA FASO
+		<img src='svg/burkina-faso.svg' alt=''>
+		<span>3.82 Palaus</span>
+		</div>
+		<div class="flag">
+		#89: 
+		CENTRAL AFRICAN REPUBLIC
+		<img src='svg/central-african-republic.svg' alt=''>
+		<span>3.91 Palaus</span>
+		</div>
+		<div class="flag">
+		#90: 
+		CUBA
+		<img src='svg/cuba.svg' alt=''>
+		<span>3.99 Palaus</span>
+		</div>
+		<div class="flag">
+		#91: 
+		GUINEA BISSAU
+		<img src='svg/guinea-bissau.svg' alt=''>
+		<span>4.01 Palaus</span>
+		</div>
+		<div class="flag">
+		#92: 
+		PAKISTAN
+		<img src='svg/pakistan.svg' alt=''>
+		<span>4.02 Palaus</span>
+		</div>
+		<div class="flag">
+		#93: 
+		NAURU
+		<img src='svg/nauru.svg' alt=''>
+		<span>4.07 Palaus</span>
+		</div>
+		<div class="flag">
+		#94: 
+		AZERBAIJAN
+		<img src='svg/azerbaijan.svg' alt=''>
+		<span>4.1 Palaus</span>
+		</div>
+		<div class="flag">
+		#95: 
+		SOUTH SUDAN
+		<img src='svg/south-sudan.svg' alt=''>
+		<span>4.14 Palaus</span>
+		</div>
+		<div class="flag">
+		#96: 
+		LIBERIA
+		<img src='svg/liberia.svg' alt=''>
+		<span>4.15 Palaus</span>
+		</div>
+		<div class="flag">
+		#97: 
+		MYANMAR
+		<img src='svg/myanmar.svg' alt=''>
+		<span>4.16 Palaus</span>
+		</div>
+		<div class="flag">
+		#98: 
+		SENEGAL
+		<img src='svg/senegal.svg' alt=''>
+		<span>4.22 Palaus</span>
+		</div>
+		<div class="flag">
+		#99: 
+		CAMEROON
+		<img src='svg/cameroon.svg' alt=''>
+		<span>4.23 Palaus</span>
+		</div>
+		<div class="flag">
+		#100: 
+		GEORGIA
+		<img src='svg/georgia.svg' alt=''>
+		<span>4.36 Palaus</span>
+		</div>
+		<div class="flag">
+		#101: 
+		TOGO
+		<img src='svg/togo.svg' alt=''>
+		<span>4.37 Palaus</span>
+		</div>
+		<div class="flag">
+		#102: 
+		VIETNAM
+		<img src='svg/vietnam.svg' alt=''>
+		<span>4.41 Palaus</span>
+		</div>
+		<div class="flag">
+		#103: 
+		SAO TOME AND PRINCIPE
+		<img src='svg/sao-tome-and-principe.svg' alt=''>
+		<span>4.45 Palaus</span>
+		</div>
+		<div class="flag">
+		#104: 
+		NAMIBIA
+		<img src='svg/namibia.svg' alt=''>
+		<span>4.57 Palaus</span>
+		</div>
+		<div class="flag">
+		#105: 
+		FEDERATED STATES OF MICRONESIA
+		<img src='svg/federated-states-of-micronesia.svg' alt=''>
+		<span>4.63 Palaus</span>
+		</div>
+		<div class="flag">
+		#106: 
+		PANAMA
+		<img src='svg/panama.svg' alt=''>
+		<span>4.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#107: 
+		INDIA
+		<img src='svg/india.svg' alt=''>
+		<span>4.82 Palaus</span>
+		</div>
+		<div class="flag">
+		#108: 
+		NORTH KOREA
+		<img src='svg/north-korea.svg' alt=''>
+		<span>4.96 Palaus</span>
+		</div>
+		<div class="flag">
+		#109: 
+		PEOPLES REPUBLIC OF CHINA
+		<img src='svg/peoples-republic-of-china.svg' alt=''>
+		<span>5.09 Palaus</span>
+		</div>
+		<div class="flag">
+		#110: 
+		COMOROS
+		<img src='svg/comoros.svg' alt=''>
+		<span>5.16 Palaus</span>
+		</div>
+		<div class="flag">
+		#111: 
+		MOROCCO
+		<img src='svg/morocco.svg' alt=''>
+		<span>5.28 Palaus</span>
+		</div>
+		<div class="flag">
+		#112: 
+		VENEZUELA
+		<img src='svg/venezuela.svg' alt=''>
+		<span>5.31 Palaus</span>
+		</div>
+		<div class="flag">
+		#113: 
+		ALGERIA
+		<img src='svg/algeria.svg' alt=''>
+		<span>5.42 Palaus</span>
+		</div>
+		<div class="flag">
+		#114: 
+		SAMOA
+		<img src='svg/samoa.svg' alt=''>
+		<span>5.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#115: 
+		BARBADOS
+		<img src='svg/barbados.svg' alt=''>
+		<span>5.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#116: 
+		MALAWI
+		<img src='svg/malawi.svg' alt=''>
+		<span>5.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#117: 
+		ANTIGUA AND BARBUDA
+		<img src='svg/antigua-and-barbuda.svg' alt=''>
+		<span>5.64 Palaus</span>
+		</div>
+		<div class="flag">
+		#118: 
+		SOUTH KOREA
+		<img src='svg/south-korea.svg' alt=''>
+		<span>5.67 Palaus</span>
+		</div>
+		<div class="flag">
+		#119: 
+		RWANDA
+		<img src='svg/rwanda.svg' alt=''>
+		<span>5.68 Palaus</span>
+		</div>
+		<div class="flag">
+		#120: 
+		HONDURAS
+		<img src='svg/honduras.svg' alt=''>
+		<span>5.77 Palaus</span>
+		</div>
+		<div class="flag">
+		#121: 
+		SINGAPORE
+		<img src='svg/singapore.svg' alt=''>
+		<span>5.91 Palaus</span>
+		</div>
+		<div class="flag">
+		#122: 
+		CAPE VERDE
+		<img src='svg/cape-verde.svg' alt=''>
+		<span>6.4 Palaus</span>
+		</div>
+		<div class="flag">
+		#123: 
+		BURUNDI
+		<img src='svg/burundi.svg' alt=''>
+		<span>6.61 Palaus</span>
+		</div>
+		<div class="flag">
+		#124: 
+		SOLOMON ISLANDS
+		<img src='svg/solomon-islands.svg' alt=''>
+		<span>6.8 Palaus</span>
+		</div>
+		<div class="flag">
+		#125: 
+		UZBEKISTAN
+		<img src='svg/uzbekistan.svg' alt=''>
+		<span>7.1 Palaus</span>
+		</div>
+		<div class="flag">
+		#126: 
+		MARSHALL ISLANDS
+		<img src='svg/marshall-islands.svg' alt=''>
+		<span>7.11 Palaus</span>
+		</div>
+		<div class="flag">
+		#127: 
+		SAINT KITTS AND NEVIS
+		<img src='svg/saint-kitts-and-nevis.svg' alt=''>
+		<span>7.22 Palaus</span>
+		</div>
+		<div class="flag">
+		#128: 
+		MONGOLIA
+		<img src='svg/mongolia.svg' alt=''>
+		<span>7.81 Palaus</span>
+		</div>
+		<div class="flag">
+		#129: 
+		BELARUS
+		<img src='svg/belarus.svg' alt=''>
+		<span>7.93 Palaus</span>
+		</div>
+		<div class="flag">
+		#130: 
+		CANADA
+		<img src='svg/canada.svg' alt=''>
+		<span>8.09 Palaus</span>
+		</div>
+		<div class="flag">
+		#131: 
+		ETHIOPIA
+		<img src='svg/ethiopia.svg' alt=''>
+		<span>8.36 Palaus</span>
+		</div>
+		<div class="flag">
+		#132: 
+		UNITED STATES
+		<img src='svg/united-states.svg' alt=''>
+		<span>8.47 Palaus</span>
+		</div>
+		<div class="flag">
+		#133: 
+		GRENADA
+		<img src='svg/grenada.svg' alt=''>
+		<span>8.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#134: 
+		KENYA
+		<img src='svg/kenya.svg' alt=''>
+		<span>8.56 Palaus</span>
+		</div>
+		<div class="flag">
+		#135: 
+		AUSTRALIA
+		<img src='svg/australia.svg' alt=''>
+		<span>9.11 Palaus</span>
+		</div>
+		<div class="flag">
+		#136: 
+		PHILIPPINES
+		<img src='svg/philippines.svg' alt=''>
+		<span>10.15 Palaus</span>
+		</div>
+		<div class="flag">
+		#137: 
+		TAJIKISTAN
+		<img src='svg/tajikistan.svg' alt=''>
+		<span>11.03 Palaus</span>
+		</div>
+		<div class="flag">
+		#138: 
+		ISRAEL
+		<img src='svg/israel.svg' alt=''>
+		<span>11.07 Palaus</span>
+		</div>
+		<div class="flag">
+		#139: 
+		MALAYSIA
+		<img src='svg/malaysia.svg' alt=''>
+		<span>11.35 Palaus</span>
+		</div>
+		<div class="flag">
+		#140: 
+		URUGUAY
+		<img src='svg/uruguay.svg' alt=''>
+		<span>11.35 Palaus</span>
+		</div>
+		<div class="flag">
+		#141: 
+		SLOVENIA
+		<img src='svg/slovenia.svg' alt=''>
+		<span>11.7 Palaus</span>
+		</div>
+		<div class="flag">
+		#142: 
+		TUVALU
+		<img src='svg/tuvalu.svg' alt=''>
+		<span>12.54 Palaus</span>
+		</div>
+		<div class="flag">
+		#143: 
+		IRAN
+		<img src='svg/iran.svg' alt=''>
+		<span>13.34 Palaus</span>
+		</div>
+		<div class="flag">
+		#144: 
+		NEPAL
+		<img src='svg/nepal.svg' alt=''>
+		<span>13.35 Palaus</span>
+		</div>
+		<div class="flag nzflag">
+		#145: 
+		NEW ZEALAND
+		<img src='svg/new-zealand.svg' alt=''>
+		<span>14.39 Palaus</span>
+		</div>
+		<div class="flag">
+		#146: 
+		VANUATU
+		<img src='svg/vanuatu.svg' alt=''>
+		<span>22.77 Palaus</span>
+		</div>
+		<div class="flag">
+		#147: 
+		IRAQ
+		<img src='svg/iraq.svg' alt=''>
+		<span>24.96 Palaus</span>
+		</div>
+		<div class="flag">
+		#148: 
+		ANGOLA
+		<img src='svg/angola.svg' alt=''>
+		<span>25.63 Palaus</span>
+		</div>
+		<div class="flag">
+		#149: 
+		MOZAMBIQUE
+		<img src='svg/mozambique.svg' alt=''>
+		<span>27.49 Palaus</span>
+		</div>
+		<div class="flag">
+		#150: 
+		LESOTHO
+		<img src='svg/lesotho.svg' alt=''>
+		<span>27.57 Palaus</span>
+		</div>
+		<div class="flag">
+		#151: 
+		ARGENTINA
+		<img src='svg/argentina.svg' alt=''>
+		<span>28.38 Palaus</span>
+		</div>
+		<div class="flag">
+		#152: 
+		BRAZIL
+		<img src='svg/brazil.svg' alt=''>
+		<span>28.63 Palaus</span>
+		</div>
+		<div class="flag">
+		#153: 
+		SLOVAKIA
+		<img src='svg/slovakia.svg' alt=''>
+		<span>29.59 Palaus</span>
+		</div>
+		<div class="flag">
+		#154: 
+		ZIMBABWE
+		<img src='svg/zimbabwe.svg' alt=''>
+		<span>31.25 Palaus</span>
+		</div>
+		<div class="flag">
+		#155: 
+		PAPUA NEW GUINEA
+		<img src='svg/papua-new-guinea.svg' alt=''>
+		<span>31.94 Palaus</span>
+		</div>
+		<div class="flag">
+		#156: 
+		UGANDA
+		<img src='svg/uganda.svg' alt=''>
+		<span>37.94 Palaus</span>
+		</div>
+		<div class="flag">
+		#157: 
+		ERITREA
+		<img src='svg/eritrea.svg' alt=''>
+		<span>38.38 Palaus</span>
+		</div>
+		<div class="flag">
+		#158: 
+		KIRIBATI
+		<img src='svg/kiribati.svg' alt=''>
+		<span>60.44 Palaus</span>
+		</div>
+		<div class="flag">
+		#159: 
+		SWAZILAND
+		<img src='svg/swaziland.svg' alt=''>
+		<span>69.65 Palaus</span>
+		</div>
+		<div class="flag nzflag">
+		#160: 
+		NZ LOCKWOOD
+		<img src='svg/nz-lockwood.svg' alt=''>
+		<span>71.62 Palaus</span>
+		</div>
+		<div class="flag">
+		#161: 
+		EQUATORIAL GUINEA
+		<img src='svg/equatorial-guinea.svg' alt=''>
+		<span>72.51 Palaus</span>
+		</div>
+		<div class="flag">
+		#162: 
+		ZAMBIA
+		<img src='svg/zambia.svg' alt=''>
+		<span>74.13 Palaus</span>
+		</div>
+		<div class="flag">
+		#163: 
+		ALBANIA
+		<img src='svg/albania.svg' alt=''>
+		<span>97.75 Palaus</span>
+		</div>
+		<div class="flag">
+		#164: 
+		CYPRUS
+		<img src='svg/cyprus.svg' alt=''>
+		<span>98.03 Palaus</span>
+		</div>
+		<div class="flag">
+		#165: 
+		KYRGYZSTAN
+		<img src='svg/kyrgyzstan.svg' alt=''>
+		<span>108.73 Palaus</span>
+		</div>
+		<div class="flag">
+		#166: 
+		OMAN
+		<img src='svg/oman.svg' alt=''>
+		<span>131.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#167: 
+		LEBANON
+		<img src='svg/lebanon.svg' alt=''>
+		<span>133.58 Palaus</span>
+		</div>
+		<div class="flag">
+		#168: 
+		LIECHTENSTEIN
+		<img src='svg/liechtenstein.svg' alt=''>
+		<span>135.01 Palaus</span>
+		</div>
+		<div class="flag">
+		#169: 
+		SAUDI ARABIA
+		<img src='svg/saudi-arabia.svg' alt=''>
+		<span>148.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#170: 
+		KAZAKHSTAN
+		<img src='svg/kazakhstan.svg' alt=''>
+		<span>160.37 Palaus</span>
+		</div>
+		<div class="flag">
+		#171: 
+		DOMINICA
+		<img src='svg/dominica.svg' alt=''>
+		<span>163.55 Palaus</span>
+		</div>
+		<div class="flag">
+		#172: 
+		MALTA
+		<img src='svg/malta.svg' alt=''>
+		<span>207.09 Palaus</span>
+		</div>
+		<div class="flag">
+		#173: 
+		MOLDOVA
+		<img src='svg/moldova.svg' alt=''>
+		<span>226.31 Palaus</span>
+		</div>
+		<div class="flag">
+		#174: 
+		EGYPT
+		<img src='svg/egypt.svg' alt=''>
+		<span>249.69 Palaus</span>
+		</div>
+		<div class="flag">
+		#175: 
+		AFGHANISTAN
+		<img src='svg/afghanistan.svg' alt=''>
+		<span>267.49 Palaus</span>
+		</div>
+		<div class="flag">
+		#176: 
+		PORTUGAL
+		<img src='svg/portugal.svg' alt=''>
+		<span>285.09 Palaus</span>
+		</div>
+		<div class="flag">
+		#177: 
+		BRUNEI
+		<img src='svg/brunei.svg' alt=''>
+		<span>296.12 Palaus</span>
+		</div>
+		<div class="flag">
+		#178: 
+		SRI LANKA
+		<img src='svg/sri-lanka.svg' alt=''>
+		<span>363.03 Palaus</span>
+		</div>
+		<div class="flag">
+		#179: 
+		BHUTAN
+		<img src='svg/bhutan.svg' alt=''>
+		<span>398.49 Palaus</span>
+		</div>
+		<div class="flag">
+		#180: 
+		HAITI
+		<img src='svg/haiti.svg' alt=''>
+		<span>452.2 Palaus</span>
+		</div>
+		<div class="flag">
+		#181: 
+		PARAGUAY
+		<img src='svg/paraguay.svg' alt=''>
+		<span>464.22 Palaus</span>
+		</div>
+		<div class="flag">
+		#182: 
+		MONTENEGRO
+		<img src='svg/montenegro.svg' alt=''>
+		<span>503.6 Palaus</span>
+		</div>
+		<div class="flag">
+		#183: 
+		CAMBODIA
+		<img src='svg/cambodia.svg' alt=''>
+		<span>682.47 Palaus</span>
+		</div>
+		<div class="flag">
+		#184: 
+		CROATIA
+		<img src='svg/croatia.svg' alt=''>
+		<span>703.5 Palaus</span>
+		</div>
+		<div class="flag">
+		#185: 
+		ANDORRA
+		<img src='svg/andorra.svg' alt=''>
+		<span>774.65 Palaus</span>
+		</div>
+		<div class="flag">
+		#186: 
+		TURKMENISTAN
+		<img src='svg/turkmenistan.svg' alt=''>
+		<span>825.96 Palaus</span>
+		</div>
+		<div class="flag">
+		#187: 
+		SPAIN
+		<img src='svg/spain.svg' alt=''>
+		<span>837.39 Palaus</span>
+		</div>
+		<div class="flag">
+		#188: 
+		GUATEMALA
+		<img src='svg/guatemala.svg' alt=''>
+		<span>1015.13 Palaus</span>
+		</div>
+		<div class="flag">
+		#189: 
+		FIJI
+		<img src='svg/fiji.svg' alt=''>
+		<span>1020.16 Palaus</span>
+		</div>
+		<div class="flag">
+		#190: 
+		VATICAN CITY
+		<img src='svg/vatican-city.svg' alt=''>
+		<span>1068.07 Palaus</span>
+		</div>
+		<div class="flag">
+		#191: 
+		NICARAGUA
+		<img src='svg/nicaragua.svg' alt=''>
+		<span>1135.93 Palaus</span>
+		</div>
+		<div class="flag">
+		#192: 
+		SAN MARINO
+		<img src='svg/san-marino.svg' alt=''>
+		<span>1538.52 Palaus</span>
+		</div>
+		<div class="flag">
+		#193: 
+		BELIZE
+		<img src='svg/belize.svg' alt=''>
+		<span>1561.7 Palaus</span>
+		</div>
+		<div class="flag">
+		#194: 
+		DOMINICAN REPUBLIC
+		<img src='svg/dominican-republic.svg' alt=''>
+		<span>1897.7 Palaus</span>
+		</div>
+		<div class="flag">
+		#195: 
+		MEXICO
+		<img src='svg/mexico.svg' alt=''>
+		<span>1963.35 Palaus</span>
+		</div>
+		<div class="flag">
+		#196: 
+		EL SALVADOR
+		<img src='svg/el-salvador.svg' alt=''>
+		<span>2104.81 Palaus</span>
+		</div>
+		<div class="flag">
+		#197: 
+		ECUADOR
+		<img src='svg/ecuador.svg' alt=''>
+		<span>4448.27 Palaus</span>
+		</div>
+		<div class="flag">
+		#198: 
+		SERBIA
+		<img src='svg/serbia.svg' alt=''>
+		<span>8680.77 Palaus</span>
+		</div>
+
+
+	</div>
+	
+	
+
+	<footer>
+	
+	</footer>
+
+
+</body>
+</html>
