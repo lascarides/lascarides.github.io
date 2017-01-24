@@ -1,0 +1,38 @@
+body {
+	background: white;
+	color: #000;
+	font-family: "Avenir", "Helvetica", "Arial";
+}
+
+.main {
+	width: 90%;
+	margin: 1rem auto;
+}
+
+th {
+	background: #eee;
+	padding: 0.3rem;
+}
+
+td {
+	padding: 0.3rem;
+}
+
+.status {
+	text-align: center;
+}
+
+.status-none {
+	background: #a00;
+	color: white;
+}
+
+.status-confirmed {
+	background: #090;
+	color: white;
+}
+
+.status-proposed {
+	background: #fc3;
+	color: black;
+}
