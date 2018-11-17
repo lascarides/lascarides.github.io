@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Arvo');
+
+body {
+    font-family: "Montserrat", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #e3e3d4;
+    margin: 2em;
+}
+a {
+    color: #a00 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arvo", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin: 0.25em auto;
+}
+
+small {
+    font-weight: normal;
+    display: block;
+}
+
+p {
+    margin: 1em auto;
+}
+
+section {
+
+}
+
+.main {
+    max-width: 50rem;
+    margin: 1em auto;
+    background: white;
+    padding: 2rem;
+    border: 1px solid #999;
+}
+.main div {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: left;
+    background: #fff;
+    color: #444;
+    border: 1px solid #aaa;
+    font-size: 0.7em;
+    overflow: hidden;
+    margin: 0 0 0.5em 0;
+}
+.main span {
+    display: block;
+    padding: 0.5em 0.5em 0;
+}
+.main span span {
+    font-size: 0.9em;
+    color: #999;
+    padding: 0;
+}
