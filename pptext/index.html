@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='National Library of New Zealand' name='author'>
+<meta content='Papers Past,New Zealand' name='keywords'>
+<meta content='' name='description'>
+<meta content='' name='publisher'>
+<title>NLNZ Text Correctible Newspapers Pilot</title>
+<link rel="stylesheet" media="all" href="fonts.css" />
+<link rel="stylesheet" media="all" href="pp.css" />
+<link rel="stylesheet" media="all" href="local.css" />
+</head>
+
+<body class='formats newspapers papers-past'>
+<div class='nav' data-toggler='.expanded' id='responsive-navigation'>
+<div class='nav__title-bar title-bar' data-responsive-toggle='responsive-navigation-top-bar'>
+<div class='title-bar-left'>
+<div class='nav__title'><a href="https://paperspast.natlib.govt.nz/">Papers Past</a></div>
+</div>
+<div class='title-bar-right show-for-small-only'>
+<a class='nav__hamburger' data-toggle='responsive-navigation'>
+<span class='nav__hamburger__text'>MENU</span>
+<span class='nav__hamburger__bars fa fa-bars'></span>
+</a>
+</div>
+</div>
+<div class='nav__top-bar top-bar' role='navigation'>
+<div class='nav__left top-bar-left'>
+<ul class='nav__menu menu' id='format-switcher-bar'>
+<li class='nav__item'>
+<a href="https://paperspast.natlib.govt.nz/newspapers"><span>NLNZ Text Correction Pilot</span></a>
+</li>
+</ul>
+</div>
+<div class='nav__right top-bar-right'>
+<ul class='nav__menu menu hide-for-medium-only dropdown' data-dropdown-menu>
+<li class='nav__item nav__item--help'>
+<a id="quick-help" href="https://paperspast.natlib.govt.nz/help"><span class="translation_missing" title="translation missing: en.nav.quick.help">Help</span></a>
+</li>
+<li class='nav__item' id='nav-about'>
+<a href="https://paperspast.natlib.govt.nz/about"><span class="translation_missing" title="translation missing: en.nav.about">About the pilot</span></a>
+</li>
+<li class='nav__item' id='nav-about'>
+<a href="https://paperspast.natlib.govt.nz/about"><span class="translation_missing" title="translation missing: en.nav.about">Your feedback</span></a>
+</li>
+<li class='nav__item' id='nav-about'>
+<a href="https://paperspast.natlib.govt.nz/"><span class="translation_missing" title="translation missing: en.nav.about">Return to Papers Past</span></a>
+</li>
+
+</ul>
+<ul class='nav__menu show-for-medium-only menu dropdown' data-dropdown-menu>
+<li class='nav__item has-submenu'>
+<a class='fa fa-bars nav__hamburger nav__hamburger--help'></a>
+<ul class='nav__menu menu submenu dropdown' data-dropdown-menu>
+<li class='nav__item nav__item--help'>
+<a id="quick-help" href="https://paperspast.natlib.govt.nz/help"><span class="translation_missing" title="translation missing: en.nav.quick.help">Help</span></a>
+</li>
+<li class='nav__item' id='nav-about'>
+<a href="https://paperspast.natlib.govt.nz/about"><span class="translation_missing" title="translation missing: en.nav.about">About</span></a>
+</li>
+<li class='nav__item has-submenu' id='locale-selector'>
+<a href="#">English</a>
+</li>
+
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div class='off-canvas-wrapper'>
+
+<div class='content-header'>
+<div class='grid-x grid-container'>
+<div class='cell medium-8'>
+<h5>
+National Library of New Zealand
+</h5>
+<h4>
+Correctable Text Newspapers Pilot
+</h4>
+</div>
+<div class='cell medium-4 explore-button'>
+
+</div>
+</div>
+</div>
+<div class='off-canvas-content' data-off-canvas-content>
+<div class='content format-home-content grid-container'>
+<div class='grid-x grid-padding-x'>
+<div class='cell large-3 medium-4'>
+<div class='div search-box-container'>
+<form data-abide="true" novalidate="novalidate" id="search-box" action="/newspapers" accept-charset="UTF-8" method="get">
+<div class='grid-y grid-padding-y'>
+<div class='cell show-for-medium'>
+<h4>
+Search
+<small>articles</small>
+</h4>
+</div>
+<div class='cell'>
+<div class='grid-x'>
+<div class='cell relative show-for-medium'>
+<h6>
+For these words
+<div class='facet-panel' id='facet-phrase'>
+<div class='grid-x facet-heading'>
+<div class='cell small-9'>
+Choose a search type
+</div>
+<div class='cell small-3 text-right'>
+<div class='panel-close'>
+<a class='close-facet-panel' href='#'>
+Close
+&#x274c;
+</a>
+</div>
+</div>
+</div>
+<div class='grid-x'>
+<div class='cell relative'>
+<div class='field'>
+<label>
+<input type="radio" name="phrase" id="phrase_0" value="0" data-dont-send="0" checked="checked" />
+<strong>All</strong> of these words
+</label>
+</div>
+<div class='field'>
+<label>
+<input type="radio" name="phrase" id="phrase_1" value="1" />
+<strong>Any</strong> of these words
+</label>
+</div>
+<div class='field'>
+<label>
+<input type="radio" name="phrase" id="phrase_2" value="2" />
+This <strong>exact</strong> phrase
+</label>
+</div>
+</div>
+</div>
+</div>
+</h6>
+</div>
+<div class='submit-error'></div>
+</div>
+<div class='grid-x'>
+<div class='cell' id='main-search-query'>
+</div>
+<input type="hidden" name="title" id="title" value="" />
+<span class='form-error'>
+Search queries must contain more than two letters or numbers
+</span>
+<input type="text" name="query" id="query" placeholder="Keyword or name" data-facet="phrase" data-validator="validateSearchQuery" />
+</div>
+</div>
+
+<div class='cell show-for-medium'>
+<div class='grid-x' id='search-facets'>
+<div class='cell relative'>
+<h6>Between dates</h6>
+<button class='facet-button' data-facet='date' id='date-facet-button'>
+<span class='facet-label' data-translation-all-dates='All dates'>
+All dates
+</span>
+<span class='right-arrow'>
+<i class="fa fa-chevron-right"></i>
+</span>
+</button>
+<div class='facet-panel' id='facet-date'>
+<div class='grid-x facet-heading'>
+<div class='cell small-9'>
+Pick the start date and end dates for your search
+</div>
+<div class='cell small-3 text-right'>
+<div class='panel-close'>
+<a class='close-facet-panel' href='#'>
+Close
+&#x274c;
+</a>
+</div>
+</div>
+</div>
+<div class='grid-x grid-margin-x'>
+<div class='cell small-6'>
+From:
+<span class='form-error'>
+Please enter date in format DD-MM-YYYY
+</span>
+<input type="text" name="start_date" id="start_date" value="01-01-1839" placeholder="Enter start date" data-dont-send="01-01-1839" data-validator="validateSearchDate" data-original-value="01-01-1839" />
+</div>
+<div class='cell small-6'>
+To:
+<span class='form-error'>
+Please enter date in format DD-MM-YYYY
+</span>
+<input type="text" name="end_date" id="end_date" value="31-12-1949" placeholder="Enter end date" data-dont-send="31-12-1949" data-validator="validateSearchDate" data-original-value="31-12-1949" />
+</div>
+</div>
+<div class='grid-x'>
+<div class='cell'>
+<div data-end-year='1949' data-start-year='1839' data-use-boundaries='true' id='year-slider-range'></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='cell show-for-medium'>
+<div class='grid-x'>
+<div class='cell relative'>
+<h6>Title</h6>
+<button class='facet-button' data-facet='publications' id='publications-facet-button'>
+<span class='facet-label' data-translation-all-publications='All titles, all regions' data-translation-all-regions='All regions' data-translation-all-titles='All titles' data-translation-none-selected='None selected' data-translation-number-of-regions='%{number} regions' data-translation-number-of-titles='%{number} titles' data-translation-one-region='1 region' data-translation-one-title='1 title'>
+All titles
+</span>
+<span class='right-arrow'>
+<i class="fa fa-chevron-right"></i>
+</span>
+</button>
+<div class='facet-panel facet-wide' id='facet-publications'>
+<div class='grid-x facet-heading'>
+<div class='cell small-9'>
+Pick the publications for your search
+<div class='publication_filter_message'>
+<em>Disabled (grey) items are not available for your selected dates</em>
+</div>
+</div>
+<div class='small-3 text-right'>
+<div class='panel-close'>
+<a class='close-facet-panel' href='#'>
+Close
+&#x274c;
+</a>
+</div>
+</div>
+</div>
+<div class='grid-x'>
+<div class='cell facet-columns'>
+<div class='facet-publication-item facet-publication-item-title all box-title'>
+<input class='publication-all-title' id='publication-all' type='checkbox'>
+<label for='publication-all'>Select all</label>
+</div>
+<hr>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-National' type='checkbox'>
+<label for='region-National'>
+<strong>National</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1848' data-region='National' data-start-year='1848' id='title-2781' type='checkbox' value='AMW'>
+<label for='title-2781'>Anglo-Maori Warder</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1892' data-region='National' data-start-year='1892' id='title-2783' type='checkbox' value='AONUPEP'>
+<label for='title-2783'>Aotearoa : he Nupepa ma nga Tangata Maori</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1862' data-region='National' data-start-year='1859' id='title-2805' type='checkbox' value='HAEATA'>
+<label for='title-2805'>Haeata</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1896' data-region='National' data-start-year='1896' id='title-2811' type='checkbox' value='HIIR'>
+<label for='title-2811'>Hiiringa i te Whitu</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1863' data-region='National' data-start-year='1862' id='title-2816' type='checkbox' value='HOKIOI'>
+<label for='title-2816'>Hokioi o Nui-Tireni, e rere atuna</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1895' data-region='National' data-start-year='1893' id='title-2817' type='checkbox' value='HUIA'>
+<label for='title-2817'>Huia Tangata Kotahi</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1900' data-region='National' data-start-year='1898' id='title-2820' type='checkbox' value='JUBIL'>
+<label for='title-2820'>Jubilee : Te Tiupiri</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1896' data-region='National' data-start-year='1894' id='title-2821' type='checkbox' value='KAHITI'>
+<label for='title-2821'>Kahiti Tuturu mo Aotearoa, me te Waipounamu</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1890' data-region='National' data-start-year='1882' id='title-2825' type='checkbox' value='KORIM'>
+<label for='title-2825'>Korimako</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1863' data-region='National' data-start-year='1842' id='title-2844' type='checkbox' value='MMTKM'>
+<label for='title-2844'>Maori Messenger : Te Karere Maori</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1924' data-region='National' data-start-year='1910' id='title-2848' type='checkbox' value='MW'>
+<label for='title-2848'>Maoriland Worker</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1930' data-region='National' data-start-year='1906' id='title-2863' type='checkbox' value='NZTR'>
+<label for='title-2863'>NZ Truth</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1863' data-region='National' data-start-year='1863' id='title-2875' type='checkbox' value='PIHOI'>
+<label for='title-2875'>Pihoihoi Mokemoke i Runga i te Tuanui</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1884' data-region='National' data-start-year='1863' id='title-2909' type='checkbox' value='WAKAM'>
+<label for='title-2909'>Waka Maori</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1878' data-region='National' data-start-year='1874' id='title-2910' type='checkbox' value='WANANG'>
+<label for='title-2910'>Wananga</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1858' data-region='National' data-start-year='1857' id='title-2920' type='checkbox' value='WHETU'>
+<label for='title-2920'>Whetu o te Tau</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Northland' type='checkbox'>
+<label for='region-Northland'>
+<strong>Northland</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1840' data-region='Northland' data-start-year='1840' id='title-2854' type='checkbox' value='NZABIG'>
+<label for='title-2854'>New Zealand Advertiser and Bay of Islands Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1939' data-region='Northland' data-start-year='1887' id='title-2849' type='checkbox' value='NA'>
+<label for='title-2849'>Northern Advocate</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Auckland' type='checkbox'>
+<label for='region-Auckland'>
+<strong>Auckland</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1864' data-region='Auckland' data-start-year='1862' id='title-2779' type='checkbox' value='ALG'>
+<label for='title-2779'>Albertland Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Auckland' data-start-year='1870' id='title-2784' type='checkbox' value='AS'>
+<label for='title-2784'>Auckland Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1876' data-region='Auckland' data-start-year='1843' id='title-2794' type='checkbox' value='DSC'>
+<label for='title-2794'>Daily Southern Cross</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1921' data-region='Auckland' data-start-year='1911' id='title-2828' type='checkbox' value='KWE'>
+<label for='title-2828'>Kaipara and Waitemata Echo</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Auckland' data-start-year='1863' id='title-2858' type='checkbox' value='NZH'>
+<label for='title-2858'>New Zealand Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1866' data-region='Auckland' data-start-year='1845' id='title-2853' type='checkbox' value='NZ'>
+<label for='title-2853'>New Zealander</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Auckland' data-start-year='1880' id='title-2896' type='checkbox' value='TO'>
+<label for='title-2896'>Observer</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1924' data-region='Auckland' data-start-year='1912' id='title-2878' type='checkbox' value='PWT'>
+<label for='title-2878'>Pukekohe &amp; Waiuku Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Auckland' data-start-year='1901' id='title-2879' type='checkbox' value='ROTWKG'>
+<label for='title-2879'>Rodney and Otamatea Times, Waitemata and Kaipara Gazette</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Waikato' type='checkbox'>
+<label for='region-Waikato'>
+<strong>Waikato</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Waikato' data-start-year='1906' id='title-2822' type='checkbox' value='KCC'>
+<label for='title-2822'>King Country Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1924' data-region='Waikato' data-start-year='1918' id='title-2940' type='checkbox' value='MATREC'>
+<label for='title-2940'>Matamata Record</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1921' data-region='Waikato' data-start-year='1891' id='title-2866' type='checkbox' value='OG'>
+<label for='title-2866'>Ohinemuri Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1935' data-region='Waikato' data-start-year='1892' id='title-2871' type='checkbox' value='PAKIOM'>
+<label for='title-2871'>Paki o Matariki</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1889' data-region='Waikato' data-start-year='1883' id='title-2888' type='checkbox' value='TAN'>
+<label for='title-2888'>Te Aroha News</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1899' data-region='Waikato' data-start-year='1874' id='title-2893' type='checkbox' value='THA'>
+<label for='title-2893'>Thames Advertiser</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Waikato' data-start-year='1874' id='title-2895' type='checkbox' value='THS'>
+<label for='title-2895'>Thames Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1935' data-region='Waikato' data-start-year='1904' id='title-2919' type='checkbox' value='WHDT'>
+<label for='title-2919'>Waihi Daily Telegraph</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1914' data-region='Waikato' data-start-year='1896' id='title-2906' type='checkbox' value='WAIGUS'>
+<label for='title-2906'>Waikato Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1949' data-region='Waikato' data-start-year='1904' id='title-2907' type='checkbox' value='WAIKIN'>
+<label for='title-2907'>Waikato Independent</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1921' data-region='Waikato' data-start-year='1872' id='title-2923' type='checkbox' value='WT'>
+<label for='title-2923'>Waikato Times</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-BayofPlenty' type='checkbox'>
+<label for='region-BayofPlenty'>
+<strong>Bay of Plenty</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Bay of Plenty' data-start-year='1939' id='title-2788' type='checkbox' value='BPB'>
+<label for='title-2788'>Bay of Plenty Beacon</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1949' data-region='Bay of Plenty' data-start-year='1872' id='title-2787' type='checkbox' value='BOPT'>
+<label for='title-2787'>Bay of Plenty Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1910' data-region='Bay of Plenty' data-start-year='1895' id='title-2812' type='checkbox' value='HLC'>
+<label for='title-2812'>Hot Lakes Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Bay of Plenty' data-start-year='1913' id='title-2899' type='checkbox' value='TPT'>
+<label for='title-2899'>Te Puke Times</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Gisborne' type='checkbox'>
+<label for='region-Gisborne'>
+<strong>Gisborne</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1881' data-region='Gisborne' data-start-year='1881' id='title-2836' type='checkbox' value='MATAR'>
+<label for='title-2836'>Matariki</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Gisborne' data-start-year='1879' id='title-2873' type='checkbox' value='PBH'>
+<label for='title-2873'>Poverty Bay Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1883' data-region='Gisborne' data-start-year='1883' id='title-2887' type='checkbox' value='TAKIT'>
+<label for='title-2887'>Takitimu</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-HawkesBay' type='checkbox'>
+<label for='region-HawkesBay'>
+<strong>Hawke&#39;s Bay</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1912' data-region='Hawke&#39;s Bay' data-start-year='1888' id='title-2785' type='checkbox' value='BA'>
+<label for='title-2785'>Bush Advocate</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1901' data-region='Hawke&#39;s Bay' data-start-year='1881' id='title-2795' type='checkbox' value='DTN'>
+<label for='title-2795'>Daily Telegraph</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Hawke&#39;s Bay' data-start-year='1896' id='title-2806' type='checkbox' value='HAST'>
+<label for='title-2806'>Hastings Standard</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1904' data-region='Hawke&#39;s Bay' data-start-year='1857' id='title-2807' type='checkbox' value='HBH'>
+<label for='title-2807'>Hawke&#39;s Bay Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1874' data-region='Hawke&#39;s Bay' data-start-year='1861' id='title-2808' type='checkbox' value='HBT'>
+<label for='title-2808'>Hawke&#39;s Bay Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1868' data-region='Hawke&#39;s Bay' data-start-year='1867' id='title-2809' type='checkbox' value='HBWT'>
+<label for='title-2809'>Hawke&#39;s Bay Weekly Times</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Taranaki' type='checkbox'>
+<label for='region-Taranaki'>
+<strong>Taranaki</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1924' data-region='Taranaki' data-start-year='1880' id='title-2814' type='checkbox' value='HNS'>
+<label for='title-2814'>Hawera &amp; Normanby Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1949' data-region='Taranaki' data-start-year='1894' id='title-2929' type='checkbox' value='OPUNT'>
+<label for='title-2929'>Opunake Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1941' data-region='Taranaki' data-start-year='1875' id='title-2872' type='checkbox' value='PATM'>
+<label for='title-2872'>Patea Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1936' data-region='Taranaki' data-start-year='1911' id='title-2928' type='checkbox' value='STEP'>
+<label for='title-2928'>Stratford Evening Post</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Taranaki' data-start-year='1900' id='title-2890' type='checkbox' value='TDN'>
+<label for='title-2890'>Taranaki Daily News</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Taranaki' data-start-year='1852' id='title-2892' type='checkbox' value='TH'>
+<label for='title-2892'>Taranaki Herald</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-ManawatuWanganui' type='checkbox'>
+<label for='region-ManawatuWanganui'>
+<strong>Manawatu-Wanganui</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1882' id='title-2802' type='checkbox' value='FS'>
+<label for='title-2802'>Feilding Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1939' data-region='Manawatu-Wanganui' data-start-year='1910' id='title-2810' type='checkbox' value='HC'>
+<label for='title-2810'>Horowhenua Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1878' id='title-2841' type='checkbox' value='MH'>
+<label for='title-2841'>Manawatu Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1923' data-region='Manawatu-Wanganui' data-start-year='1883' id='title-2845' type='checkbox' value='MS'>
+<label for='title-2845'>Manawatu Standard</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1928' data-region='Manawatu-Wanganui' data-start-year='1877' id='title-2846' type='checkbox' value='MT'>
+<label for='title-2846'>Manawatu Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1907' id='title-2924' type='checkbox' value='RAMA'>
+<label for='title-2924'>Rangitikei Advocate and Manawatu Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1914' id='title-2930' type='checkbox' value='TAIDT'>
+<label for='title-2930'>Taihape Daily Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='Manawatu-Wanganui' data-start-year='1874' id='title-2911' type='checkbox' value='WC'>
+<label for='title-2911'>Wanganui Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1867' id='title-2918' type='checkbox' value='WH'>
+<label for='title-2918'>Wanganui Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Manawatu-Wanganui' data-start-year='1883' id='title-2922' type='checkbox' value='WOODEX'>
+<label for='title-2922'>Woodville Examiner</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Wellington' type='checkbox'>
+<label for='region-Wellington'>
+<strong>Wellington</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Wellington' data-start-year='1907' id='title-2793' type='checkbox' value='DOM'>
+<label for='title-2793'>Dominion</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Wellington' data-start-year='1865' id='title-2798' type='checkbox' value='EP'>
+<label for='title-2798'>Evening Post</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Wellington' data-start-year='1900' id='title-2856' type='checkbox' value='NZFL'>
+<label for='title-2856'>Free Lance</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Wellington' data-start-year='1927' id='title-2813' type='checkbox' value='HN'>
+<label for='title-2813'>Hutt News</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='Wellington' data-start-year='1911' id='title-2818' type='checkbox' value='HVI'>
+<label for='title-2818'>Hutt Valley Independent</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1858' data-region='Wellington' data-start-year='1857' id='title-2823' type='checkbox' value='KOP'>
+<label for='title-2823'>Karere o Poneke</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1913' data-region='Wellington' data-start-year='1911' id='title-2843' type='checkbox' value='MKURA'>
+<label for='title-2843'>Mareikura</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1906' data-region='Wellington' data-start-year='1903' id='title-2837' type='checkbox' value='MATUH'>
+<label for='title-2837'>Matuhi</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1843' data-region='Wellington' data-start-year='1842' id='title-2855' type='checkbox' value='NZCPNA'>
+<label for='title-2855'>New Zealand Colonist and Port Nicholson Advertiser</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1844' data-region='Wellington' data-start-year='1839' id='title-2857' type='checkbox' value='NZGWS'>
+<label for='title-2857'>New Zealand Gazette and Wellington Spectator</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1865' data-region='Wellington' data-start-year='1844' id='title-2860' type='checkbox' value='NZSCSG'>
+<label for='title-2860'>New Zealand Spectator and Cook&#39;s Strait Guardian</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Wellington' data-start-year='1874' id='title-2862' type='checkbox' value='NZTIM'>
+<label for='title-2862'>New Zealand Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1943' data-region='Wellington' data-start-year='1919' id='title-2943' type='checkbox' value='OTMAIL'>
+<label for='title-2943'>Otaki Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1913' data-region='Wellington' data-start-year='1897' id='title-2877' type='checkbox' value='PUKEH'>
+<label for='title-2877'>Puke ki Hikurangi</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1939' data-region='Wellington' data-start-year='1935' id='title-2902' type='checkbox' value='UHWR'>
+<label for='title-2902'>Upper Hutt Weekly Review</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1841' data-region='Wellington' data-start-year='1841' id='title-2904' type='checkbox' value='VT'>
+<label for='title-2904'>Victoria Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Wellington' data-start-year='1906' id='title-2905' type='checkbox' value='WAG'>
+<label for='title-2905'>Wairarapa Age</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='Wellington' data-start-year='1879' id='title-2916' type='checkbox' value='WDT'>
+<label for='title-2916'>Wairarapa Daily Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1887' data-region='Wellington' data-start-year='1867' id='title-2908' type='checkbox' value='WAIST'>
+<label for='title-2908'>Wairarapa Standard</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1874' data-region='Wellington' data-start-year='1845' id='title-2921' type='checkbox' value='WI'>
+<label for='title-2921'>Wellington Independent</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Nelson' type='checkbox'>
+<label for='region-Nelson'>
+<strong>Nelson</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Nelson' data-start-year='1857' id='title-2889' type='checkbox' value='TC'>
+<label for='title-2889'>Colonist</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1911' data-region='Nelson' data-start-year='1883' id='title-2939' type='checkbox' value='GBARG'>
+<label for='title-2939'>Golden Bay Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1938' data-region='Nelson' data-start-year='1901' id='title-2941' type='checkbox' value='MOST'>
+<label for='title-2941'>Motueka Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1922' data-region='Nelson' data-start-year='1866' id='title-2850' type='checkbox' value='NEM'>
+<label for='title-2850'>Nelson Evening Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1874' data-region='Nelson' data-start-year='1842' id='title-2851' type='checkbox' value='NENZC'>
+<label for='title-2851'>Nelson Examiner and New Zealand Chronicle</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Marlborough' type='checkbox'>
+<label for='region-Marlborough'>
+<strong>Marlborough</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Marlborough' data-start-year='1868' id='title-2840' type='checkbox' value='MEX'>
+<label for='title-2840'>Marlborough Express</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='Marlborough' data-start-year='1890' id='title-2874' type='checkbox' value='PGAMA'>
+<label for='title-2874'>Pelorus Guardian and Miners&#39; Advocate.</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Canterbury' type='checkbox'>
+<label for='region-Canterbury'>
+<strong>Canterbury</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1939' data-region='Canterbury' data-start-year='1877' id='title-2780' type='checkbox' value='AMBPA'>
+<label for='title-2780'>Akaroa Mail and Banks Peninsula Advertiser</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1921' data-region='Canterbury' data-start-year='1879' id='title-2776' type='checkbox' value='AG'>
+<label for='title-2776'>Ashburton Guardian</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Canterbury' data-start-year='1891' id='title-2797' type='checkbox' value='EG'>
+<label for='title-2797'>Ellesmere Guardian</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1882' data-region='Canterbury' data-start-year='1874' id='title-2803' type='checkbox' value='GLOBE'>
+<label for='title-2803'>Globe</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1914' data-region='Canterbury' data-start-year='1851' id='title-2832' type='checkbox' value='LT'>
+<label for='title-2832'>Lyttelton Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1939' data-region='Canterbury' data-start-year='1932' id='title-2942' type='checkbox' value='NCGAZ'>
+<label for='title-2942'>North Canterbury Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1901' data-region='Canterbury' data-start-year='1889' id='title-2867' type='checkbox' value='OO'>
+<label for='title-2867'>Oxford Observer</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1945' data-region='Canterbury' data-start-year='1861' id='title-2790' type='checkbox' value='CHP'>
+<label for='title-2790'>Press</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1901' data-region='Canterbury' data-start-year='1879' id='title-2938' type='checkbox' value='SCANT'>
+<label for='title-2938'>South Canterbury Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Canterbury' data-start-year='1868' id='title-2900' type='checkbox' value='TS'>
+<label for='title-2900'>Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Canterbury' data-start-year='1914' id='title-2884' type='checkbox' value='SUNCH'>
+<label for='title-2884'>Sun</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1932' data-region='Canterbury' data-start-year='1878' id='title-2891' type='checkbox' value='TEML'>
+<label for='title-2891'>Temuka Leader</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Canterbury' data-start-year='1864' id='title-2894' type='checkbox' value='THD'>
+<label for='title-2894'>Timaru Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='Canterbury' data-start-year='1898' id='title-2915' type='checkbox' value='WDA'>
+<label for='title-2915'>Waimate Daily Advertiser</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-WestCoast' type='checkbox'>
+<label for='region-WestCoast'>
+<strong>West Coast</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1867' data-region='West Coast' data-start-year='1867' id='title-2789' type='checkbox' value='CHARG'>
+<label for='title-2789'>Charleston Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='West Coast' data-start-year='1866' id='title-2804' type='checkbox' value='GRA'>
+<label for='title-2804'>Grey River Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='West Coast' data-start-year='1901' id='title-2927' type='checkbox' value='GEST'>
+<label for='title-2927'>Greymouth Evening Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1919' data-region='West Coast' data-start-year='1877' id='title-2819' type='checkbox' value='IT'>
+<label for='title-2819'>Inangahua Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1896' data-region='West Coast' data-start-year='1877' id='title-2827' type='checkbox' value='KUMAT'>
+<label for='title-2827'>Kumara Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1886' data-region='West Coast' data-start-year='1885' id='title-2833' type='checkbox' value='LTCBG'>
+<label for='title-2833'>Lyell Times and Central Buller Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1916' data-region='West Coast' data-start-year='1865' id='title-2914' type='checkbox' value='WCT'>
+<label for='title-2914'>West Coast Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1886' data-region='West Coast' data-start-year='1868' id='title-2917' type='checkbox' value='WEST'>
+<label for='title-2917'>Westport Times</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Otago' type='checkbox'>
+<label for='region-Otago'>
+<strong>Otago</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1948' data-region='Otago' data-start-year='1902' id='title-2777' type='checkbox' value='AHCOG'>
+<label for='title-2777'>Alexandra Herald and Central Otago Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1865' id='title-2786' type='checkbox' value='BH'>
+<label for='title-2786'>Bruce Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1874' id='title-2791' type='checkbox' value='CL'>
+<label for='title-2791'>Clutha Leader</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1948' data-region='Otago' data-start-year='1869' id='title-2792' type='checkbox' value='CROMARG'>
+<label for='title-2792'>Cromwell Argus</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1948' data-region='Otago' data-start-year='1866' id='title-2796' type='checkbox' value='DUNST'>
+<label for='title-2796'>Dunstan Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1942' data-region='Otago' data-start-year='1865' id='title-2799' type='checkbox' value='ESD'>
+<label for='title-2799'>Evening Star</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1948' data-region='Otago' data-start-year='1947' id='title-2830' type='checkbox' value='LCM'>
+<label for='title-2830'>Lake County Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1928' data-region='Otago' data-start-year='1872' id='title-2831' type='checkbox' value='LCP'>
+<label for='title-2831'>Lake County Press</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1947' data-region='Otago' data-start-year='1863' id='title-2834' type='checkbox' value='LWM'>
+<label for='title-2834'>Lake Wakatip Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1883' id='title-2839' type='checkbox' value='ME'>
+<label for='title-2839'>Mataura Ensign</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1926' data-region='Otago' data-start-year='1869' id='title-2842' type='checkbox' value='MIC'>
+<label for='title-2842'>Mount Ida Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1941' data-region='Otago' data-start-year='1881' id='title-2847' type='checkbox' value='MTBM'>
+<label for='title-2847'>Mt Benger Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1918' data-region='Otago' data-start-year='1864' id='title-2852' type='checkbox' value='NOT'>
+<label for='title-2852'>North Otago Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1876' id='title-2864' type='checkbox' value='OAM'>
+<label for='title-2864'>Oamaru Mail</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1942' data-region='Otago' data-start-year='1861' id='title-2865' type='checkbox' value='ODT'>
+<label for='title-2865'>Otago Daily Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1851' id='title-2869' type='checkbox' value='OW'>
+<label for='title-2869'>Otago Witness</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1932' data-region='Otago' data-start-year='1905' id='title-2868' type='checkbox' value='OSWCC'>
+<label for='title-2868'>Otautau Standard and Wallace County Chronicle</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1893' id='title-2925' type='checkbox' value='SOCR'>
+<label for='title-2925'>Southern Cross</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1862' id='title-2881' type='checkbox' value='ST'>
+<label for='title-2881'>Southland Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1868' id='title-2901' type='checkbox' value='TT'>
+<label for='title-2901'>Tuapeka Times</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1920' data-region='Otago' data-start-year='1873' id='title-2926' type='checkbox' value='WSTAR'>
+<label for='title-2926'>Western Star</label>
+</div>
+</div>
+<div class='facet-publication-region box-panel'>
+<div class='region-title box-title'>
+<input id='region-Samoa' type='checkbox'>
+<label for='region-Samoa'>
+<strong>Samoa</strong>
+</label>
+</div>
+<hr>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1896' data-region='Samoa' data-start-year='1888' id='title-2882' type='checkbox' value='STSSA'>
+<label for='title-2882'>Samoa Times and South Sea Advertiser</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1881' data-region='Samoa' data-start-year='1877' id='title-2883' type='checkbox' value='STSSG'>
+<label for='title-2883'>Samoa Times and South Sea Gazette</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1900' data-region='Samoa' data-start-year='1892' id='title-2885' type='checkbox' value='SWH'>
+<label for='title-2885'>Samoa Weekly Herald</label>
+</div>
+<div class='facet-publication-item'>
+<input class='publication-checkbox' data-end-year='1930' data-region='Samoa' data-start-year='1903' id='title-2880' type='checkbox' value='SAMZ'>
+<label for='title-2880'>Samoanische Zeitung</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='cell'>
+<div class='grid-x show-for-medium'>
+<div class='cell relative'>
+<h6>Content Type</h6>
+<button class='facet-button facet-type_ty' data-all-facet-translation-key='all-type-ty' data-facet='filter-Type__TY_' data-plural='Content Type' data-translation-all-type-ty='All types of content' id='Filter-facet-button'>
+<span class='facet-label'></span>
+<span class='right-arrow'><i class="fa fa-chevron-right"></i></span>
+</button>
+<div class='dynamic facet-panel' data-keyname='Content Type' id='facet-filter-Type__TY_'>
+<div class='grid-x facet-heading'>
+<div class='cell small-9'>
+Filter by Content Type
+<em>Grey numbers indicate matches for each</em>
+</div>
+<div class='cell small-3 text-right'>
+<div class='panel-close'>
+<a class='close-facet-panel' href='#'>
+Close
+&#x274c;
+</a>
+</div>
+</div>
+</div>
+<div class='facet-list grid-x'>
+<div class='generic-facet-item all box-title cell'>
+<input id='type-all' type='checkbox'>
+<label for='type-all'>
+Select all
+</label>
+</div>
+<div class='facet-item cell'>
+<input class='type' id='type-ARTICLE' type='checkbox' value='ARTICLE'>
+<label for='type-ARTICLE'>
+<span class='facet-name'>ARTICLE</span>
+</label>
+</div>
+<div class='facet-item cell'>
+<input class='type' id='type-ADVERTISEMENT' type='checkbox' value='ADVERTISEMENT'>
+<label for='type-ADVERTISEMENT'>
+<span class='facet-name'>ADVERTISEMENT</span>
+</label>
+</div>
+<div class='facet-item cell'>
+<input class='type' id='type-ILLUSTRATION' type='checkbox' value='ILLUSTRATION'>
+<label for='type-ILLUSTRATION'>
+<span class='facet-name'>ILLUSTRATION</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-x submitted_facets'>
+<input type="hidden" name="type" id="type" />
+</div>
+
+<div class='cell'>
+<div class='grid-x'>
+<div class='cell medium-6 show-for-medium'>
+<div class='clear-search'><a href="https://paperspast.natlib.govt.nz/newspapers?clear_search_settings=true">Clear search</a></div>
+</div>
+<div class='cell medium-6 small-12'>
+<input type="submit" value="Search" class="button postfix solid" data-disable-with="Search" />
+</div>
+</div>
+</div>
+</div>
+</form>
+
+</div>
+
+<div class='panel'>
+<p></p>
+</div>
+</div>
+<div class='cell large-9 medium-8 right-panel'>
+<div class='overlay facet-overlay close-facet-panel'></div>
+<div class='overlay facet-overlay close-facet-panel'></div>
+<div class='grid-x'>
+<div class='cell large-10 large-offset-1'>
+<div class='grid-x'>
+<div class='cell' id='browse-button'>
+
+<div class="not-pp-box">
+This is a pilot of the National Library's text correctible newspapers. It is NOT Papers Past.
+</div>
+
+
+
+<h4>
+Explore
+<small>newspapers</small>
+</h4>
+<div class='grid-x grid-margin-x'>
+<div class='cell medium-4'>
+<a id="publication-all" href="https://paperspast.natlib.govt.nz/newspapers/all">By <strong>title</strong></a>
+</div>
+<div class='cell medium-4'>
+<a href="https://paperspast.natlib.govt.nz/newspapers/all#region">By <strong>region</strong></a>
+</div>
+<div class='cell medium-4'>
+<a href="https://paperspast.natlib.govt.nz/newspapers/all#year">By <strong>year</strong></a>
+</div>
+</div>
+</div>
+<div class='cell'>
+
+
+
+<h3>About the Text Correction Pilot</h3>
+
+<p>This Pilot home page will also function as the About page for the pilot.</p>
+
+<h4>Sample article page</h4>
+
+<p>
+<a href="./article.html">Try it now</a>
+</p>
+
+<h4>Things that will go in this space:</h4>
+
+<ul>
+	<li>An explanation of the pilot</li>
+	<li>A call to action to try it</li>
+	<li>FAQs about how the pilot works and why it's taken so long</li>
+	<li>FAQs about how the pilot works and why it's taken so long</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class='grid-container'>
+<nav>
+<ul class='menu grid-x show-for-medium'>
+<li class='cell auto'><a href="https://paperspast.natlib.govt.nz/sitemap">Site map</a></li>
+<li class='cell auto'><a href="https://paperspast.natlib.govt.nz/accessibility">Accessibility</a></li>
+<li class='cell auto'><a href="https://paperspast.natlib.govt.nz/collaborative">Collaborative digitisation</a></li>
+<li class='cell auto'><a href="https://paperspast.natlib.govt.nz/terms">Terms and conditions</a></li>
+<li class='cell auto'><a href="https://paperspast.natlib.govt.nz/contact">Contact us</a></li>
+</ul>
+<ul class='menu grid-x show-for-small-only'>
+<li class='cell small-6'><a href="https://paperspast.natlib.govt.nz/sitemap">Site map</a></li>
+<li class='cell small-6'><a href="https://paperspast.natlib.govt.nz/accessibility">Accessibility</a></li>
+<li class='cell small-6'><a href="https://paperspast.natlib.govt.nz/collaborative">Collaborative digitisation</a></li>
+<li class='cell small-6'><a href="https://paperspast.natlib.govt.nz/terms">Terms and conditions</a></li>
+<li class='cell small-6'><a href="https://paperspast.natlib.govt.nz/contact">Contact us</a></li>
+</ul>
+</nav>
+<div class='grid-x grid-margin-x'>
+<div class='cell small-6 large-4 large-offset-2'>
+<a href='http://natlib.govt.nz' title='National Library of New Zealand'>
+<img alt="National Library of New Zealand" class="footer-logo-natlib" src="https://paperspast.natlib.govt.nz/assets/footer_logo_natlib-093a99f21f5a37c33d4e9fb3b07ec251e56b3531171d69a2991a10aac3468a0c.png" />
+</a>
+</div>
+<div class='cell small-6 large-4'>
+<a href='https://www.govt.nz/' title='newzealand.govt.nz'>
+<img alt="newzealand.govt.nz" class="footer-logo-nz" src="https://paperspast.natlib.govt.nz/assets/footer_logo_nzgovt-946715a032c6438af8e4158161ca8e9ca799310b7af94fca08efe33115a56d04.png" />
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div aria-hidden class='loading-spinner text-center hide'>
+<div class='fa fa-spinner fa-pulse fa-3x'></div>
+<p><span class="translation_missing" title="translation missing: en.working">Working</span></p>
+</div>
+
+</body>
+<div class='js'>
+<script src="https://paperspast.natlib.govt.nz/assets/application-402c2a66963208681558f2c67d750d5b608b0281cbfad5f3945d540e3c1648a0.js"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="2nrrAScAHXmCRTyTLME6Fd9o2U0vV2xyc59cJLbsBKu1Dx6mLCf8DD/D2qHY/xcymTjIxjo/pEa9ujibx7tWLw==" />
+
+</div>
+</html>

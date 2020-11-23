@@ -1,0 +1,3527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A deep dive on DigitalNZ search behaviour</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/css/hopscotch.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main">
+<h1>A deep dive on DigitalNZ search behaviour</h1>
+<h3>Looking at changes in performance between old and new DNZ</h3>
+<h4>by Michael Lascarides • December 2017</h4>
+<p id='intro'></p>
+<h2 id='images'>Remind me: What do the different sites look like?</h2>
+<h3>Original Site (Oct 2016)</h3>
+<img src='img/201610.jpg' id='screenshot-201610'>
+<h3>Kereru Launch (Oct 2017)</h3>
+<img src='img/201710.jpg' id='screenshot-201710'>
+<h3>Kereru Revised (Dec 2017)</h3>
+<img src='img/201712.jpg' id='screenshot-201712'>
+<h2 id='metadata'>Search metadata</h2>
+<table><tr>
+<th>Metric</th>
+<th>Original Site (Oct 2016)</th>
+<th>Kereru Launch (Oct 2017)</th>
+<th>Kereru Revised (Dec 2017)</th>
+</tr>
+<tr>
+<td class='header-column'>Total queries</td>
+<td>26737</td>
+<td>35168</td>
+<td>16276</td>
+</tr>
+<tr>
+<td class='header-column'>Total unique queries</td>
+<td>17280</td>
+<td>17584</td>
+<td>8456</td>
+</tr>
+</table>
+<h2 id='report-0'>Search performance by facets</h2>
+<p>There are 32 distinct facets. 
+(25 in Original Site (Oct 2016), 28 in Kereru Launch (Oct 2017), 28 in Kereru Revised (Dec 2017))
+</p>
+<p><em>Showing % of queries using</em></p>
+<table><tr>
+<th>facets</th>
+<th>Original Site (Oct 2016)</th>
+<th>Kereru Launch (Oct 2017)</th>
+<th>Kereru Revised (Dec 2017)</th>
+</tr>
+<tr id='item-0-0'>
+<td class='header-column'>keyword</td>
+<td class='no-change'>
+94.7%
+</td>
+<td class='change-decrease-2'>
+92.11%
+</td>
+<td class='change-decrease-2'>
+91.26%
+</td>
+</tr>
+<tr id='item-0-1'>
+<td class='header-column'>tab: images</td>
+<td class='no-change'>
+30.73%
+</td>
+<td class='change-increase'>
+31.61%
+</td>
+<td class='change-increase'>
+32.78%
+</td>
+</tr>
+<tr id='item-0-2'>
+<td class='header-column'>content_partner</td>
+<td class='no-change'>
+12.85%
+</td>
+<td class='change-increase'>
+20.54%
+</td>
+<td class='change-decrease-2'>
+10.65%
+</td>
+</tr>
+<tr id='item-0-3'>
+<td class='header-column'>primary_collection</td>
+<td class='no-change'>
+12.34%
+</td>
+<td class='change-increase'>
+19.11%
+</td>
+<td class='change-decrease-2'>
+10.01%
+</td>
+</tr>
+<tr id='item-0-4'>
+<td class='header-column'>year/decade</td>
+<td class='no-change'>
+4.16%
+</td>
+<td class='change-decrease-2'>
+3.88%
+</td>
+<td class='change-increase'>
+4.37%
+</td>
+</tr>
+<tr id='item-0-5'>
+<td class='header-column'>subject_text</td>
+<td class='no-change'>
+2.81%
+</td>
+<td class='change-increase'>
+4.14%
+</td>
+<td class='change-increase'>
+3.53%
+</td>
+</tr>
+<tr id='item-0-6'>
+<td class='header-column'>tab: videos</td>
+<td class='no-change'>
+2.16%
+</td>
+<td class='change-decrease-3'>
+1.42%
+</td>
+<td class='change-decrease-2'>
+1.51%
+</td>
+</tr>
+<tr id='item-0-7'>
+<td class='header-column'>usage</td>
+<td class='no-change'>
+1.57%
+</td>
+<td class='change-increase'>
+2.18%
+</td>
+<td class='change-increase'>
+2.43%
+</td>
+</tr>
+<tr id='item-0-8'>
+<td class='header-column'>tab: sets/stories</td>
+<td class='no-change'>
+1.19%
+</td>
+<td class='no-change'>
+1.19%
+</td>
+<td class='change-decrease-3'>
+0.79%
+</td>
+</tr>
+<tr id='item-0-9'>
+<td class='header-column'>tab: audio</td>
+<td class='no-change'>
+1.1%
+</td>
+<td class='change-decrease-4'>
+0.5%
+</td>
+<td class='change-decrease-3'>
+0.66%
+</td>
+</tr>
+<tr id='item-0-10'>
+<td class='header-column'>tab: articles</td>
+<td class='no-change'>
+0.49%
+</td>
+<td class='change-decrease-2'>
+0.46%
+</td>
+<td class='change-decrease-2'>
+0.37%
+</td>
+</tr>
+<tr id='item-0-11'>
+<td class='header-column'>end_year</td>
+<td class='no-change'>
+0.48%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-0-12'>
+<td class='header-column'>start_year</td>
+<td class='no-change'>
+0.44%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-0-13'>
+<td class='header-column'>tab: newspapers</td>
+<td class='no-change'>
+0.41%
+</td>
+<td class='change-increase'>
+0.53%
+</td>
+<td class='change-increase'>
+0.58%
+</td>
+</tr>
+<tr id='item-0-14'>
+<td class='header-column'>tab: archives</td>
+<td class='no-change'>
+0.24%
+</td>
+<td class='change-increase'>
+0.53%
+</td>
+<td class='change-increase'>
+0.48%
+</td>
+</tr>
+<tr id='item-0-15'>
+<td class='header-column'>tab: other</td>
+<td class='no-change'>
+0.23%
+</td>
+<td class='change-decrease-5'>
+0.09%
+</td>
+<td class='change-decrease-9'>
+0.04%
+</td>
+</tr>
+<tr id='item-0-16'>
+<td class='header-column'>tab: books</td>
+<td class='no-change'>
+0.16%
+</td>
+<td class='change-increase'>
+0.22%
+</td>
+<td class='change-increase'>
+0.17%
+</td>
+</tr>
+<tr id='item-0-17'>
+<td class='header-column'>tab: research+papers</td>
+<td class='no-change'>
+0.1%
+</td>
+<td class='change-increase'>
+0.19%
+</td>
+<td class='change-increase'>
+0.17%
+</td>
+</tr>
+<tr id='item-0-18'>
+<td class='header-column'>display_collection</td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-decrease-3'>
+0.04%
+</td>
+<td class='change-decrease-4'>
+0.03%
+</td>
+</tr>
+<tr id='item-0-19'>
+<td class='header-column'>tag</td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-increase'>
+0.09%
+</td>
+<td class='change-decrease-6'>
+0.02%
+</td>
+</tr>
+<tr id='item-0-20'>
+<td class='header-column'>format</td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-decrease-9'>
+0.01%
+</td>
+<td class='change-decrease-3'>
+0.04%
+</td>
+</tr>
+<tr id='item-0-21'>
+<td class='header-column'>tab: manuscripts</td>
+<td class='no-change'>
+0.05%
+</td>
+<td class='change-increase'>
+0.11%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+</tr>
+<tr id='item-0-22'>
+<td class='header-column'>tab: data</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.09%
+</td>
+</tr>
+<tr id='item-0-23'>
+<td class='header-column'>tab: reference+sources</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.38%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-0-24'>
+<td class='header-column'>title</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-0-25'>
+<td class='header-column'>concept_ids</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.16%
+</td>
+<td class='change-decrease-3'>
+0.1%
+</td>
+</tr>
+<tr id='item-0-26'>
+<td class='header-column'>tab: websites</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-0-27'>
+<td class='header-column'>tab: music+score</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.05%
+</td>
+<td class='change-decrease-9'>
+0.01%
+</td>
+</tr>
+<tr id='item-0-28'>
+<td class='header-column'>tab: groups</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.05%
+</td>
+</tr>
+<tr id='item-0-29'>
+<td class='header-column'>tab: guides+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-3'>
+0.02%
+</td>
+</tr>
+<tr id='item-0-30'>
+<td class='header-column'>tab: journals</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.05%
+</td>
+</tr>
+<tr id='item-0-31'>
+<td class='header-column'>category</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.05%
+</td>
+</tr>
+</table>
+<h2 id='report-1'>Search performance by facet combinations</h2>
+<p>There are 234 distinct facet combinations. 
+(141 in Original Site (Oct 2016), 176 in Kereru Launch (Oct 2017), 117 in Kereru Revised (Dec 2017))
+</p>
+<p><em>Showing % of queries using</em></p>
+<table><tr>
+<th>facet combinations</th>
+<th>Original Site (Oct 2016)</th>
+<th>Kereru Launch (Oct 2017)</th>
+<th>Kereru Revised (Dec 2017)</th>
+</tr>
+<tr id='item-1-0'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span></td>
+<td class='no-change'>
+44.66%
+</td>
+<td class='change-decrease-2'>
+35.84%
+</td>
+<td class='change-decrease-2'>
+44.13%
+</td>
+</tr>
+<tr id='item-1-1'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+26.81%
+</td>
+<td class='change-decrease-2'>
+25.96%
+</td>
+<td class='change-increase'>
+26.87%
+</td>
+</tr>
+<tr id='item-1-2'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span></td>
+<td class='no-change'>
+10.35%
+</td>
+<td class='change-increase'>
+15.92%
+</td>
+<td class='change-decrease-2'>
+7.21%
+</td>
+</tr>
+<tr id='item-1-3'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span></td>
+<td class='no-change'>
+2.44%
+</td>
+<td class='change-increase'>
+3.14%
+</td>
+<td class='change-decrease-2'>
+2.31%
+</td>
+</tr>
+<tr id='item-1-4'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span></td>
+<td class='no-change'>
+1.82%
+</td>
+<td class='change-decrease-3'>
+0.96%
+</td>
+<td class='change-decrease-3'>
+0.93%
+</td>
+</tr>
+<tr id='item-1-5'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+1.57%
+</td>
+<td class='change-increase'>
+1.62%
+</td>
+<td class='change-decrease-2'>
+1.38%
+</td>
+</tr>
+<tr id='item-1-6'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+1.55%
+</td>
+<td class='change-decrease-2'>
+1.19%
+</td>
+<td class='change-decrease-2'>
+1.54%
+</td>
+</tr>
+<tr id='item-1-7'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='no-change'>
+1.08%
+</td>
+<td class='change-decrease-2'>
+0.8%
+</td>
+<td class='change-decrease-3'>
+0.55%
+</td>
+</tr>
+<tr id='item-1-8'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.89%
+</td>
+<td class='change-decrease-4'>
+0.38%
+</td>
+<td class='change-decrease-3'>
+0.45%
+</td>
+</tr>
+<tr id='item-1-9'>
+<td class='header-column'><em>blank search</em></td>
+<td class='no-change'>
+0.74%
+</td>
+<td class='change-increase'>
+0.83%
+</td>
+<td class='change-increase'>
+1.23%
+</td>
+</tr>
+<tr id='item-1-10'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='no-change'>
+0.67%
+</td>
+<td class='change-increase'>
+1.66%
+</td>
+<td class='change-decrease-2'>
+0.66%
+</td>
+</tr>
+<tr id='item-1-11'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span></td>
+<td class='no-change'>
+0.48%
+</td>
+<td class='change-decrease-3'>
+0.25%
+</td>
+<td class='change-increase'>
+0.58%
+</td>
+</tr>
+<tr id='item-1-12'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.46%
+</td>
+<td class='change-increase'>
+0.76%
+</td>
+<td class='change-increase'>
+1.11%
+</td>
+</tr>
+<tr id='item-1-13'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">articles</span></td>
+<td class='no-change'>
+0.43%
+</td>
+<td class='change-decrease-2'>
+0.36%
+</td>
+<td class='change-decrease-3'>
+0.28%
+</td>
+</tr>
+<tr id='item-1-14'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span></td>
+<td class='no-change'>
+0.4%
+</td>
+<td class='change-increase'>
+1.48%
+</td>
+<td class='change-increase'>
+0.78%
+</td>
+</tr>
+<tr id='item-1-15'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.37%
+</td>
+<td class='change-increase'>
+0.5%
+</td>
+<td class='change-increase'>
+0.72%
+</td>
+</tr>
+<tr id='item-1-16'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span></td>
+<td class='no-change'>
+0.33%
+</td>
+<td class='change-increase'>
+0.35%
+</td>
+<td class='change-increase'>
+0.45%
+</td>
+</tr>
+<tr id='item-1-17'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.32%
+</td>
+<td class='change-decrease-2'>
+0.25%
+</td>
+<td class='change-increase'>
+0.47%
+</td>
+</tr>
+<tr id='item-1-18'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span></td>
+<td class='no-change'>
+0.27%
+</td>
+<td class='change-decrease-3'>
+0.16%
+</td>
+<td class='change-increase'>
+0.47%
+</td>
+</tr>
+<tr id='item-1-19'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.25%
+</td>
+<td class='change-decrease-2'>
+0.18%
+</td>
+<td class='change-increase'>
+0.31%
+</td>
+</tr>
+<tr id='item-1-20'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.24%
+</td>
+<td class='no-change'>
+0.24%
+</td>
+<td class='change-decrease-4'>
+0.12%
+</td>
+</tr>
+<tr id='item-1-21'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.22%
+</td>
+<td class='change-decrease-4'>
+0.09%
+</td>
+<td class='change-increase'>
+0.32%
+</td>
+</tr>
+<tr id='item-1-22'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">archives</span></td>
+<td class='no-change'>
+0.22%
+</td>
+<td class='change-increase'>
+0.39%
+</td>
+<td class='change-increase'>
+0.41%
+</td>
+</tr>
+<tr id='item-1-23'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.21%
+</td>
+<td class='change-decrease-3'>
+0.11%
+</td>
+<td class='change-decrease-9'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-24'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.21%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-25'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.19%
+</td>
+<td class='change-increase'>
+0.53%
+</td>
+<td class='change-decrease-9'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-26'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">other</span></td>
+<td class='no-change'>
+0.18%
+</td>
+<td class='change-decrease-5'>
+0.07%
+</td>
+<td class='change-decrease-9'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-27'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span></td>
+<td class='no-change'>
+0.17%
+</td>
+<td class='change-increase'>
+0.27%
+</td>
+<td class='change-increase'>
+0.81%
+</td>
+</tr>
+<tr id='item-1-28'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">books</span></td>
+<td class='no-change'>
+0.14%
+</td>
+<td class='change-decrease-2'>
+0.13%
+</td>
+<td class='change-decrease-2'>
+0.12%
+</td>
+</tr>
+<tr id='item-1-29'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='no-change'>
+0.12%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-30'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.1%
+</td>
+<td class='change-decrease-3'>
+0.06%
+</td>
+<td class='change-decrease-3'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-31'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">research+papers</span></td>
+<td class='no-change'>
+0.1%
+</td>
+<td class='change-increase'>
+0.11%
+</td>
+<td class='no-change'>
+0.1%
+</td>
+</tr>
+<tr id='item-1-32'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.09%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-33'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.08%
+</td>
+<td class='change-decrease-2'>
+0.07%
+</td>
+<td class='change-decrease-2'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-34'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">audio</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-decrease-3'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-35'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='no-change'>
+0.07%
+</td>
+</tr>
+<tr id='item-1-36'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span></td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-increase'>
+0.7%
+</td>
+<td class='change-increase'>
+1.05%
+</td>
+</tr>
+<tr id='item-1-37'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-decrease-2'>
+0.05%
+</td>
+<td class='change-increase'>
+0.07%
+</td>
+</tr>
+<tr id='item-1-38'>
+<td class='header-column'><span class='facet facet-tag'>tag</span></td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-decrease-6'>
+0.02%
+</td>
+<td class='change-decrease-6'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-39'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-increase'>
+0.09%
+</td>
+<td class='no-change'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-40'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-decrease-6'>
+0.02%
+</td>
+<td class='change-increase'>
+0.1%
+</td>
+</tr>
+<tr id='item-1-41'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-decrease-9'>
+0.01%
+</td>
+<td class='change-increase'>
+0.15%
+</td>
+</tr>
+<tr id='item-1-42'>
+<td class='header-column'><span class="facet facet-tab">sets/stories</span></td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.24%
+</td>
+<td class='change-increase'>
+0.24%
+</td>
+</tr>
+<tr id='item-1-43'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">manuscripts</span></td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.08%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-44'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">other</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-45'>
+<td class='header-column'><span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.78%
+</td>
+<td class='change-increase'>
+1.13%
+</td>
+</tr>
+<tr id='item-1-46'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-47'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">articles</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-48'>
+<td class='header-column'><span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+<td class='change-increase'>
+0.08%
+</td>
+</tr>
+<tr id='item-1-49'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-50'>
+<td class='header-column'><span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-51'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">audio</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-52'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">videos</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-53'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+<td class='change-increase'>
+0.1%
+</td>
+</tr>
+<tr id='item-1-54'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-55'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-display_collection'>display_collection</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-decrease-3'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-56'>
+<td class='header-column'><span class='facet facet-format'>format</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-57'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">data</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-3'>
+0.02%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-58'>
+<td class='header-column'><span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-59'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-60'>
+<td class='header-column'><span class='facet facet-display_collection'>display_collection</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-61'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.14%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-62'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-decrease-4'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-63'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-64'>
+<td class='header-column'><span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-65'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.07%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-66'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-67'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-68'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-69'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-70'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-71'>
+<td class='header-column'><span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.24%
+</td>
+<td class='change-increase'>
+0.37%
+</td>
+</tr>
+<tr id='item-1-72'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">books</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-73'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">archives</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-74'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">sets/stories</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-75'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-76'>
+<td class='header-column'><span class="facet facet-tab">videos</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.16%
+</td>
+<td class='change-increase'>
+0.21%
+</td>
+</tr>
+<tr id='item-1-77'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-78'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+<td class='change-increase'>
+0.05%
+</td>
+</tr>
+<tr id='item-1-79'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">manuscripts</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-80'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-81'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+<td class='change-increase'>
+0.08%
+</td>
+</tr>
+<tr id='item-1-82'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-end_year'>end_year</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-83'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-84'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">other</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-85'>
+<td class='header-column'><span class='facet facet-display_collection'>display_collection</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-86'>
+<td class='header-column'><span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.07%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-87'>
+<td class='header-column'><span class='facet facet-title'>title</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-88'>
+<td class='header-column'><span class="facet facet-tab">articles</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-89'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-90'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.11%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-91'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-92'>
+<td class='header-column'><span class='facet facet-format'>format</span> <span class="facet facet-tab">images</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-93'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">reference+sources</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.16%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-94'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class='facet facet-start_year'>start_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-95'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-96'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-97'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-start_year'>start_year</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-98'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-99'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-display_collection'>display_collection</span> <span class="facet facet-tab">data</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-100'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-101'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">audio</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-102'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-103'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">videos</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-104'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-display_collection'>display_collection</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-105'>
+<td class='header-column'><span class='facet facet-format'>format</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-increase'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-106'>
+<td class='header-column'><span class='facet facet-format'>format</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-107'>
+<td class='header-column'><span class='facet facet-format'>format</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-108'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-109'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">videos</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-110'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-111'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">books</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-112'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">sets/stories</span> <span class='facet facet-usage'>usage</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-113'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">research+papers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-114'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">reference+sources</span></td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+<td class='change-increase'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-115'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">articles</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-116'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.28%
+</td>
+<td class='change-decrease-8'>
+0.07%
+</td>
+</tr>
+<tr id='item-1-117'>
+<td class='header-column'><span class="facet facet-tab">audio</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.05%
+</td>
+<td class='change-increase'>
+0.12%
+</td>
+</tr>
+<tr id='item-1-118'>
+<td class='header-column'><span class="facet facet-tab">other</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-119'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">archives</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-120'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">articles</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-121'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-122'>
+<td class='header-column'><span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-123'>
+<td class='header-column'><span class="facet facet-tab">archives</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-124'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-125'>
+<td class='header-column'><span class="facet facet-tab">data</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-126'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-127'>
+<td class='header-column'><span class='facet facet-end_year'>end_year</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-start_year'>start_year</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-128'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-129'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-130'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-131'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-132'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">sets/stories</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-133'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-134'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-135'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">videos</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-136'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">audio</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-137'>
+<td class='header-column'><span class="facet facet-tab">sets/stories</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-138'>
+<td class='header-column'><span class='facet facet-tag'>tag</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-139'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-decrease-2'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-140'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-start_year'>start_year</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-141'>
+<td class='header-column'><span class="facet facet-tab">archives</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.13%
+</td>
+<td class='change-decrease-3'>
+0.07%
+</td>
+</tr>
+<tr id='item-1-142'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">reference+sources</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.08%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-143'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-decrease-3'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-144'>
+<td class='header-column'><span class="facet facet-tab">books</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.07%
+</td>
+<td class='change-decrease-2'>
+0.05%
+</td>
+</tr>
+<tr id='item-1-145'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">reference+sources</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-146'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-tag'>tag</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.06%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-147'>
+<td class='header-column'><span class="facet facet-tab">newspapers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.05%
+</td>
+<td class='change-decrease-2'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-148'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.05%
+</td>
+<td class='change-decrease-5'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-149'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">music+score</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-150'>
+<td class='header-column'><span class="facet facet-tab">videos</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-increase'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-151'>
+<td class='header-column'><span class="facet facet-tab">research+papers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-3'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-152'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">websites</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-153'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">groups</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-154'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-155'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-156'>
+<td class='header-column'><span class="facet facet-tab">websites</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-157'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-158'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">audio</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-159'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">newspapers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-160'>
+<td class='header-column'><span class="facet facet-tab">manuscripts</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-decrease-4'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-161'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-decrease-4'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-162'>
+<td class='header-column'><span class="facet facet-tab">guides+</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-163'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-164'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">journals</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.03%
+</td>
+</tr>
+<tr id='item-1-165'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">websites</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-166'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-167'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-168'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">guides+</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-169'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">research+papers</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-170'>
+<td class='header-column'><span class="facet facet-tab">archives</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-171'>
+<td class='header-column'><span class="facet facet-tab">music+score</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-172'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-173'>
+<td class='header-column'><span class="facet facet-tab">groups</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-174'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-subject_text'>subject_text</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-175'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">research+papers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-176'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">other</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-177'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">reference+sources</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-178'>
+<td class='header-column'><span class='facet facet-display_collection'>display_collection</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-179'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">research+papers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-180'>
+<td class='header-column'><span class="facet facet-tab">audio</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-181'>
+<td class='header-column'><span class="facet facet-tab">reference+sources</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-182'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-183'>
+<td class='header-column'><span class='facet facet-concept_ids'>concept_ids</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-increase'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-184'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-185'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">books</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-186'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">books</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-187'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-188'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">data</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-189'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">websites</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-190'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-191'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">sets/stories</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-192'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">books</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-193'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">other</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-194'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">reference+sources</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-195'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.06%
+</td>
+</tr>
+<tr id='item-1-196'>
+<td class='header-column'><span class="facet facet-tab">newspapers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-197'>
+<td class='header-column'><span class="facet facet-tab">research+papers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-198'>
+<td class='header-column'><span class="facet facet-tab">websites</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-199'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-200'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">archives</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-201'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-202'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">newspapers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-203'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-204'>
+<td class='header-column'><span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">groups</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-205'>
+<td class='header-column'><span class="facet facet-tab">research+papers</span> <span class='facet facet-tag'>tag</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-206'>
+<td class='header-column'><span class="facet facet-tab">books</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-207'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">archives</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-208'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">books</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-209'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">music+score</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-210'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-211'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">sets/stories</span> <span class='facet facet-tag'>tag</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-212'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">manuscripts</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-213'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">images</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-214'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">research+papers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-215'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">articles</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-216'>
+<td class='header-column'><span class='facet facet-display_collection'>display_collection</span> <span class="facet facet-keyword">keyword</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-217'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-218'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">groups</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-219'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">sets/stories</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-1-220'>
+<td class='header-column'><span class='facet facet-category'>category</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.04%
+</td>
+</tr>
+<tr id='item-1-221'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span> <span class='facet facet-usage'>usage</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-222'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-subject_text'>subject_text</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-223'>
+<td class='header-column'><span class="facet facet-tab">journals</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-224'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-tab">research+papers</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.02%
+</td>
+</tr>
+<tr id='item-1-225'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-format'>format</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-226'>
+<td class='header-column'><span class='facet facet-category'>category</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-227'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-228'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">newspapers</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-229'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class="facet facet-tab">data</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-230'>
+<td class='header-column'><span class="facet facet-keyword">keyword</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class="facet facet-tab">videos</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-231'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-usage'>usage</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-232'>
+<td class='header-column'><span class='facet facet-content_partner'>content_partner</span> <span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-year/decade'>year/decade</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+<tr id='item-1-233'>
+<td class='header-column'><span class='facet facet-primary_collection'>primary_collection</span> <span class='facet facet-subject_text'>subject_text</span> <span class="facet facet-tab">images</span></td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='no-change'>
+0.01%
+</td>
+</tr>
+</table>
+<h2 id='report-2'>Search performance by facet combination patterns</h2>
+<p>There are 18 distinct facet combination patterns. 
+(18 in Original Site (Oct 2016), 15 in Kereru Launch (Oct 2017), 13 in Kereru Revised (Dec 2017))
+</p>
+<p><em>Showing % of queries using</em></p>
+<table><tr>
+<th>facet combination patterns</th>
+<th>Original Site (Oct 2016)</th>
+<th>Kereru Launch (Oct 2017)</th>
+<th>Kereru Revised (Dec 2017)</th>
+</tr>
+<tr id='item-2-0'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span>
+</td>
+<td class='no-change'>
+44.66%
+</td>
+<td class='change-decrease-2'>
+35.84%
+</td>
+<td class='change-decrease-2'>
+44.13%
+</td>
+</tr>
+<tr id='item-2-1'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet facet-tab'>tab</span>
+</td>
+<td class='no-change'>
+32.06%
+</td>
+<td class='change-decrease-2'>
+29.79%
+</td>
+<td class='change-decrease-2'>
+30.37%
+</td>
+</tr>
+<tr id='item-2-2'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet'>2 facets</span>
+</td>
+<td class='no-change'>
+10.77%
+</td>
+<td class='change-increase'>
+16.13%
+</td>
+<td class='change-decrease-2'>
+7.45%
+</td>
+</tr>
+<tr id='item-2-3'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet facet-tab'>tab</span> <span class='facet'>1 facet</span>
+</td>
+<td class='no-change'>
+3.28%
+</td>
+<td class='change-increase'>
+3.85%
+</td>
+<td class='change-increase'>
+4.21%
+</td>
+</tr>
+<tr id='item-2-4'>
+<td class='header-column'>
+<span class='facet'>1 facet</span>
+</td>
+<td class='no-change'>
+3.25%
+</td>
+<td class='change-increase'>
+4.01%
+</td>
+<td class='change-increase'>
+4.2%
+</td>
+</tr>
+<tr id='item-2-5'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet'>1 facet</span>
+</td>
+<td class='no-change'>
+3.16%
+</td>
+<td class='change-increase'>
+5.35%
+</td>
+<td class='change-increase'>
+4.41%
+</td>
+</tr>
+<tr id='item-2-6'>
+<td class='header-column'>
+
+<em>blank search</em>
+</td>
+<td class='no-change'>
+0.74%
+</td>
+<td class='change-increase'>
+0.83%
+</td>
+<td class='change-increase'>
+1.23%
+</td>
+</tr>
+<tr id='item-2-7'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet facet-tab'>tab</span> <span class='facet'>2 facets</span>
+</td>
+<td class='no-change'>
+0.63%
+</td>
+<td class='change-increase'>
+1.0%
+</td>
+<td class='change-increase'>
+0.69%
+</td>
+</tr>
+<tr id='item-2-8'>
+<td class='header-column'>
+<span class='facet facet-tab'>tab</span> <span class='facet'>1 facet</span>
+</td>
+<td class='no-change'>
+0.51%
+</td>
+<td class='no-change'>
+0.51%
+</td>
+<td class='change-decrease-2'>
+0.37%
+</td>
+</tr>
+<tr id='item-2-9'>
+<td class='header-column'>
+<span class='facet'>2 facets</span>
+</td>
+<td class='no-change'>
+0.38%
+</td>
+<td class='change-decrease-3'>
+0.22%
+</td>
+<td class='change-increase'>
+0.71%
+</td>
+</tr>
+<tr id='item-2-10'>
+<td class='header-column'>
+<span class='facet facet-tab'>tab</span> <span class='facet'>2 facets</span>
+</td>
+<td class='no-change'>
+0.26%
+</td>
+<td class='change-increase'>
+0.61%
+</td>
+<td class='change-decrease-3'>
+0.14%
+</td>
+</tr>
+<tr id='item-2-11'>
+<td class='header-column'>
+<span class='facet facet-tab'>tab</span>
+</td>
+<td class='no-change'>
+0.12%
+</td>
+<td class='change-increase'>
+1.69%
+</td>
+<td class='change-increase'>
+2.06%
+</td>
+</tr>
+<tr id='item-2-12'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet'>3 facets</span>
+</td>
+<td class='no-change'>
+0.09%
+</td>
+<td class='change-increase'>
+0.14%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-2-13'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet facet-tab'>tab</span> <span class='facet'>3 facets</span>
+</td>
+<td class='no-change'>
+0.04%
+</td>
+<td class='change-decrease-8'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-2-14'>
+<td class='header-column'>
+<span class='facet'>3 facets</span>
+</td>
+<td class='no-change'>
+0.03%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-decrease-6'>
+0.01%
+</td>
+</tr>
+<tr id='item-2-15'>
+<td class='header-column'>
+<span class='facet facet-tab'>tab</span> <span class='facet'>3 facets</span>
+</td>
+<td class='no-change'>
+0.02%
+</td>
+<td class='change-decrease-4'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-2-16'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet'>4 facets</span>
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+<tr id='item-2-17'>
+<td class='header-column'>
+<span class='facet facet-keyword'>keyword</span> <span class='facet'>5 facets</span>
+</td>
+<td class='no-change'>
+0.01%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+<td class='change-nil'>
+0.0%
+</td>
+</tr>
+</table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/js/hopscotch.min.js"></script>
+<script src="local.js"></script>
+</body>
+</html>
